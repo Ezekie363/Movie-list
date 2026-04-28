@@ -98,109 +98,76 @@
 <div id="list"></div>
 
 <script>
-const list = document.getElementById("list");
-const input = document.getElementById("search");
-const tagFilter = document.getElementById("tagFilter");
-const sortSelect = document.getElementById("sortSelect");
-const categoryFilter = document.getElementById("categoryFilter");
+window.onload = () => {
+  const list = document.getElementById("list");
+  const input = document.getElementById("search");
+  const tagFilter = document.getElementById("tagFilter");
+  const sortSelect = document.getElementById("sortSelect");
+  const categoryFilter = document.getElementById("categoryFilter");
 
-let movies = [];
+  let movies = [];
 
-/* 读取 JSON */
-fetch("movies.json")
-  .then(res => res.json())
-  .then(data => {
-    movies = data || [];
-    initTags();
-    render();
-  })
-  .catch(err => {
-    console.error("加载失败:", err);
-    list.innerHTML = "<p class='empty'>⚠️ 数据加载失败</p>";
-  });
+  fetch("movies.json")
+    .then(res => res.json())
+    .then(data => {
+      movies = data;
+      initTags();
+      render();
+    });
 
-/* 初始化标签 */
-function initTags() {
-  const tags = new Set();
+  function initTags() {
+    const tags = new Set();
+    movies.forEach(m => (m.tags || []).forEach(t => tags.add(t)));
 
-  movies.forEach(m => {
-    (m.tags || []).forEach(t => tags.add(t));
-  });
-
-  tags.forEach(tag => {
-    const option = document.createElement("option");
-    option.value = tag;
-    option.textContent = tag;
-    tagFilter.appendChild(option);
-  });
-}
-
-/* 渲染 */
-function render() {
-  const keyword = (input.value || "").toLowerCase();
-  const selectedTag = tagFilter.value;
-  const selectedCategory = categoryFilter.value;
-  const sortType = sortSelect.value;
-
-  let filtered = movies.filter(m => {
-    const title = (m.title || "").toLowerCase();
-    const tags = (m.tags || []);
-
-    const matchKeyword =
-      title.includes(keyword) ||
-      tags.join("").includes(keyword);
-
-    const matchTag =
-      !selectedTag || tags.includes(selectedTag);
-
-    const matchCategory =
-      !selectedCategory || m.category === selectedCategory;
-
-    return matchKeyword && matchTag && matchCategory;
-  });
-
-  /* 排序 */
-  if (sortType === "rating_desc") {
-    filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-  } else if (sortType === "rating_asc") {
-    filtered.sort((a, b) => (a.rating || 0) - (b.rating || 0));
+    tags.forEach(tag => {
+      const option = document.createElement("option");
+      option.value = tag;
+      option.textContent = tag;
+      tagFilter.appendChild(option);
+    });
   }
 
-  /* 渲染 */
-  list.innerHTML = "";
+  function render() {
+    const keyword = input.value.toLowerCase();
+    const selectedTag = tagFilter.value;
+    const selectedCategory = categoryFilter.value;
+    const sortType = sortSelect.value;
 
-  if (filtered.length === 0) {
-    list.innerHTML = "<p class='empty'>😢 没有找到结果</p>";
-    return;
+    let filtered = movies.filter(m => {
+      const title = (m.title || "").toLowerCase();
+      const tags = (m.tags || []);
+
+      return (
+        (title.includes(keyword) || tags.join("").includes(keyword)) &&
+        (!selectedTag || tags.includes(selectedTag)) &&
+        (!selectedCategory || m.category === selectedCategory)
+      );
+    });
+
+    if (sortType === "rating_desc") {
+      filtered.sort((a, b) => b.rating - a.rating);
+    } else if (sortType === "rating_asc") {
+      filtered.sort((a, b) => a.rating - b.rating);
+    }
+
+    list.innerHTML = "";
+
+    filtered.forEach(m => {
+      const div = document.createElement("div");
+      div.className = "movie";
+      div.innerHTML = `
+        <div class="title">${m.title} (${m.year})</div>
+        <div>评分：${m.rating}</div>
+      `;
+      list.appendChild(div);
+    });
   }
 
-  filtered.forEach(m => {
-    const div = document.createElement("div");
-    div.className = "movie";
-
-    div.innerHTML = `
-      <div class="title">${m.title} (${m.year})</div>
-      <div>评分：${m.rating || "暂无"}</div>
-      <div class="tags">
-        ${(m.tags || []).map(t => `<span onclick="quickFilter('${t}')">#${t}</span>`).join("")}
-      </div>
-    `;
-
-    list.appendChild(div);
-  });
-}
-
-/* 点击标签快速筛选 */
-function quickFilter(tag) {
-  tagFilter.value = tag;
-  render();
-}
-
-/* 监听 */
-input.addEventListener("input", render);
-tagFilter.addEventListener("change", render);
-sortSelect.addEventListener("change", render);
-categoryFilter.addEventListener("change", render);
+  input.addEventListener("input", render);
+  tagFilter.addEventListener("change", render);
+  sortSelect.addEventListener("change", render);
+  categoryFilter.addEventListener("change", render);
+};
 </script>
 
 </body>
