@@ -31,12 +31,12 @@
 ## 🙌 如何参与
 
 ### 方法一（推荐）
-1. Fork 本仓库
-2. 添加电影
+1. Fork 本仓库 
+2. 添加电影 ps：按照movie_fork_template文件提交电影
 3. 提交 PR
 
 ### 方法二（最简单）
-直接提 Issue！
+直接提 Issue！ps：按照ISSUSE_TEMPLATE文件提交电影
 
 ---
 
