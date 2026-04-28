@@ -2,10 +2,9 @@ name: Generate Movie JSON
 
 on:
   push:
-    paths:
-      - 'data/**'
-      - 'scripts/**'
-      - '.github/workflows/**'
+
+permissions:
+  contents: write   # ✅ 关键：允许自动 push
 
 jobs:
   build:
@@ -13,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout 仓库
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # ✅ 升级版本
 
       - name: 设置 Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5   # ✅ 升级版本
         with:
           python-version: '3.x'
 
