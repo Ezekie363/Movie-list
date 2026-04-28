@@ -2,6 +2,7 @@
 
 这是一个可以和朋友一起维护的电影影单仓库 🍿
 作者：Ezekiel
+
 ---
 
 ## 📂 分类
@@ -16,6 +17,7 @@
 - 🔫 战争 → data/war
 - 🀄️ 中文 → data/chinese
 
+---
 ## 🔍 搜索页面
   https://ezekie363.github.io/-Movie-list/index.html
   
