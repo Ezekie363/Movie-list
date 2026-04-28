@@ -1,12 +1,42 @@
 <script>
+const list = document.getElementById("list");
+const input = document.getElementById("search");
+
 let movies = [];
 
 fetch("movies.json")
   .then(res => res.json())
   .then(data => {
     movies = data;
-    render();
+    render();   // ✅ 关键：必须调用
+  })
+  .catch(err => {
+    console.error("加载失败:", err);
   });
-</script>  render(e.target.value);
+
+function render(filter="") {
+  list.innerHTML = "";
+
+  movies
+    .filter(m =>
+      m.title.toLowerCase().includes(filter.toLowerCase()) ||
+      m.tags.join("").includes(filter)
+    )
+    .forEach(m => {
+      const div = document.createElement("div");
+      div.className = "movie";
+
+      div.innerHTML = `
+        <div class="title">${m.title} (${m.year})</div>
+        <div>评分：${m.rating}</div>
+        <div>${m.tags.map(t => `<span>#${t}</span>`).join(" ")}</div>
+      `;
+
+      list.appendChild(div);
+    });
+}
+
+input.addEventListener("input", e => {
+  render(e.target.value);
 });
 </script>
