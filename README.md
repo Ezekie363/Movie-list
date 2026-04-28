@@ -32,7 +32,7 @@
 
 ### 方法一（推荐）
 1. Fork 本仓库 
-2. 添加电影 ps：按照movie_fork_template文件提交电影
+2. 添加电影 ps：按照movie_fork_template文件，复制模版在对应的data分类里面创建新md文件提交电影
 3. 提交 PR
 
 ### 方法二（最简单）
