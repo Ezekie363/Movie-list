@@ -11,6 +11,13 @@
 - 🚀 科幻 → data/sci-fi
 - 😂 喜剧 → data/comedy
 - 🎨 动画 → data/animation
+- 📝 纪录 → data/documentary
+- 🧑‍🧑‍🧒 家庭 → data/family
+- 🔫 战争 → data/war
+- 🀄️ 中文 → data/chinese
+
+
+
 
 ---
 
