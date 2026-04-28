@@ -1,4 +1,4 @@
-# 🎬 当幸福来敲门 The Pursuit of Happyness(2016)
+# 🎬 当幸福来敲门 The Pursuit of Happyness (2016)
 
 - 导演：加布里埃莱·穆奇诺
 - 主演：威尔·史密斯 / 贾登·史密斯 / 坦迪·牛顿
