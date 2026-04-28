@@ -333,6 +333,19 @@
     "genre": "科幻 / 惊悚 / 冒险"
   },
   {
+    "title": "盗梦空间 Inception",
+    "year": 2010,
+    "category": "sci-fi",
+    "rating": 9.0,
+    "tags": [
+      "烧脑",
+      "梦境"
+    ],
+    "director": "Christopher Nolan",
+    "actors": "Leonardo DiCaprio",
+    "genre": "Sci-Fi"
+  },
+  {
     "title": "蜘蛛侠：纵横宇宙 Spider-Man: Across the Spider-Verse",
     "year": 2023,
     "category": "animation",
