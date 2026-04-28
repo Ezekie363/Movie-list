@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Movie List</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
   
   <style>
     body { 
@@ -48,12 +48,28 @@
     .title { 
       font-weight: bold; 
       font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    /* ✅ 标签样式优化 */
+    .tags {
+      margin-top: 6px;
     }
 
     .tags span {
+      display: inline-block;
       margin-right: 6px;
-      color: #666;
+      padding: 3px 8px;
+      background: #e0e0e0;
+      border-radius: 12px;
+      font-size: 12px;
+      color: #444;
       cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tags span:hover {
+      background: #d0d0d0;
     }
 
     .empty {
@@ -157,16 +173,34 @@ window.onload = () => {
 
     list.innerHTML = "";
 
+    if (filtered.length === 0) {
+      list.innerHTML = `<div class="empty">😢 没有找到匹配的电影</div>`;
+      return;
+    }
+
     filtered.forEach(m => {
       const div = document.createElement("div");
       div.className = "movie";
+
       div.innerHTML = `
         <div class="title">${m.title} (${m.year})</div>
-        <div>评分：${m.rating}</div>
+        <div>评分：${m.rating || "暂无"}</div>
+        <div class="tags">
+          ${(m.tags || []).map(t => 
+            `<span onclick="quickFilter('${t}')">#${t}</span>`
+          ).join("")}
+        </div>
       `;
+
       list.appendChild(div);
     });
   }
+
+  // ✅ 点击标签快速筛选
+  window.quickFilter = function(tag) {
+    tagFilter.value = tag;
+    render();
+  };
 
   input.addEventListener("input", render);
   tagFilter.addEventListener("change", render);
