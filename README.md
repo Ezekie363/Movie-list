@@ -20,7 +20,7 @@
 
 ---
 ## 🔍 搜索页面
-  https://ezekie363.github.io/-Movie-list/index.html
+  https://ezekie363.github.io/Movie-list/index.html
   
 ---  
 ## 🎬 作者自用电影下载网址
