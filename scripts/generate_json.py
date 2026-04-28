@@ -12,6 +12,7 @@ def extract(pattern, text, default=""):
     return match.group(1).strip() if match else default
 
 for root, _, files in os.walk(DATA_DIR):
+    category = os.path.basename(root)
     for file in files:
         if not file.endswith(".md"):
             continue
@@ -48,6 +49,7 @@ for root, _, files in os.walk(DATA_DIR):
         movies.append({
             "title": title,
             "year": year,
+            "category": category,
             "rating": rating,
             "tags": tags,
             "director": director,
