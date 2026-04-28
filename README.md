@@ -1,7 +1,7 @@
-# 🎬 Shared Movie List
+# 🎬 Shared Movie List 共享电影表单
 
 这是一个可以和朋友一起维护的电影影单仓库 🍿
-
+作者：Ezekiel
 ---
 
 ## 📂 分类
@@ -18,7 +18,9 @@
 
 ## 🔍 搜索页面
   https://ezekie363.github.io/-Movie-list/index.html
-## 🎬 作者自用下载网址
+  
+---  
+## 🎬 作者自用电影下载网址
   https://www.btsj6.com
 
 
