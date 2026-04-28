@@ -7,40 +7,59 @@ OUTPUT = "docs/movies.json"
 
 movies = []
 
+def extract(pattern, text, default=""):
+    match = re.search(pattern, text, re.MULTILINE)
+    return match.group(1).strip() if match else default
+
 for root, _, files in os.walk(DATA_DIR):
     for file in files:
-        if file.endswith(".md"):
-            path = os.path.join(root, file)
+        if not file.endswith(".md"):
+            continue
 
+        path = os.path.join(root, file)
+
+        try:
             with open(path, "r", encoding="utf-8") as f:
                 content = f.read()
+        except:
+            continue
 
-                title_match = re.search(r"# 🎬 (.+?) \((\d{4})\)", content)
-                rating_match = re.search(r"评分（1-10）：\s*(\d+\.?\d*)", content)
-                tags_match = re.search(r"标签：(.+)", content)
+        # 标题（支持中英文）
+        title_match = re.search(r"# 🎬 (.+?) \((\d{4})\)", content)
+        if not title_match:
+            continue
 
-                if title_match:
-                    title = title_match.group(1)
-                    year = int(title_match.group(2))
-                else:
-                    continue
+        title = title_match.group(1).strip()
+        year = int(title_match.group(2))
 
-                rating = float(rating_match.group(1)) if rating_match else 0
+        rating = extract(r"评分（1-10）：\s*([0-9.]+)", content, "0")
+        try:
+            rating = float(rating)
+        except:
+            rating = 0
 
-                tags = []
-                if tags_match:
-                    tags = [t.replace("#", "").strip() for t in tags_match.group(1).split()]
+        tags_line = extract(r"标签：(.+)", content)
+        tags = [t.replace("#", "").strip() for t in tags_line.split() if t]
 
-                movies.append({
-                    "title": title,
-                    "year": year,
-                    "rating": rating,
-                    "tags": tags
-                })
+        director = extract(r"- 导演：(.+)", content)
+        actors = extract(r"- 主演：(.+)", content)
+        genre = extract(r"- 类型：(.+)", content)
 
+        movies.append({
+            "title": title,
+            "year": year,
+            "rating": rating,
+            "tags": tags,
+            "director": director,
+            "actors": actors,
+            "genre": genre
+        })
+
+# 确保 docs 存在
 os.makedirs("docs", exist_ok=True)
 
+# 写入 JSON
 with open(OUTPUT, "w", encoding="utf-8") as f:
     json.dump(movies, f, ensure_ascii=False, indent=2)
 
-print("movies.json generated!")
+print(f"✅ Generated {len(movies)} movies")
