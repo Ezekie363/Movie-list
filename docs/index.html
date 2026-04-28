@@ -10,7 +10,7 @@
       margin: auto; 
     }
 
-    input, select { 
+    input { 
       width: 100%; 
       padding: 10px; 
       margin: 10px 0; 
@@ -19,10 +19,12 @@
     .controls {
       display: flex;
       gap: 10px;
+      margin-bottom: 10px;
     }
 
     .controls select {
       flex: 1;
+      padding: 8px;
     }
 
     .movie { 
@@ -46,6 +48,13 @@
     .tags span {
       margin-right: 6px;
       color: #666;
+      cursor: pointer;
+    }
+
+    .empty {
+      text-align: center;
+      color: #888;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -57,6 +66,7 @@
 
 <div class="controls">
 
+  <!-- 大类别 -->
   <select id="categoryFilter">
     <option value="">全部大类</option>
     <option value="action">🎬 动作</option>
@@ -70,15 +80,19 @@
     <option value="chinese">🀄️ 中文</option>
     <option value="drama">🎦 剧情</option>
   </select>
+
+  <!-- 小类别 -->
   <select id="tagFilter">
-    <option value="">全部类型</option>
+    <option value="">全部标签</option>
   </select>
 
+  <!-- 排序 -->
   <select id="sortSelect">
     <option value="">默认排序</option>
     <option value="rating_desc">评分从高到低</option>
     <option value="rating_asc">评分从低到高</option>
   </select>
+
 </div>
 
 <div id="list"></div>
@@ -88,6 +102,7 @@ const list = document.getElementById("list");
 const input = document.getElementById("search");
 const tagFilter = document.getElementById("tagFilter");
 const sortSelect = document.getElementById("sortSelect");
+const categoryFilter = document.getElementById("categoryFilter");
 
 let movies = [];
 
@@ -101,7 +116,7 @@ fetch("movies.json")
   })
   .catch(err => {
     console.error("加载失败:", err);
-    list.innerHTML = "<p>⚠️ 数据加载失败，请检查 movies.json</p>";
+    list.innerHTML = "<p class='empty'>⚠️ 数据加载失败</p>";
   });
 
 /* 初始化标签 */
@@ -120,10 +135,11 @@ function initTags() {
   });
 }
 
-/* 渲染函数 */
+/* 渲染 */
 function render() {
   const keyword = (input.value || "").toLowerCase();
   const selectedTag = tagFilter.value;
+  const selectedCategory = categoryFilter.value;
   const sortType = sortSelect.value;
 
   let filtered = movies.filter(m => {
@@ -137,7 +153,10 @@ function render() {
     const matchTag =
       !selectedTag || tags.includes(selectedTag);
 
-    return matchKeyword && matchTag;
+    const matchCategory =
+      !selectedCategory || m.category === selectedCategory;
+
+    return matchKeyword && matchTag && matchCategory;
   });
 
   /* 排序 */
@@ -151,7 +170,7 @@ function render() {
   list.innerHTML = "";
 
   if (filtered.length === 0) {
-    list.innerHTML = "<p>😢 没有找到结果</p>";
+    list.innerHTML = "<p class='empty'>😢 没有找到结果</p>";
     return;
   }
 
@@ -163,7 +182,7 @@ function render() {
       <div class="title">${m.title} (${m.year})</div>
       <div>评分：${m.rating || "暂无"}</div>
       <div class="tags">
-        ${(m.tags || []).map(t => `<span>#${t}</span>`).join("")}
+        ${(m.tags || []).map(t => `<span onclick="quickFilter('${t}')">#${t}</span>`).join("")}
       </div>
     `;
 
@@ -171,10 +190,17 @@ function render() {
   });
 }
 
+/* 点击标签快速筛选 */
+function quickFilter(tag) {
+  tagFilter.value = tag;
+  render();
+}
+
 /* 监听 */
 input.addEventListener("input", render);
 tagFilter.addEventListener("change", render);
 sortSelect.addEventListener("change", render);
+categoryFilter.addEventListener("change", render);
 </script>
 
 </body>
