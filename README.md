@@ -19,7 +19,7 @@
 - 🎦 剧情 → data/drama
 
 ---
-## 🔍 搜索页面
+## 🔍 电影检索页面
   https://ezekie363.github.io/Movie-list/index.html
   
 ---  
