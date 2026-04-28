@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Movie List</title>
+  <style>
+    body { font-family: Arial; max-width: 800px; margin: auto; }
+    input { width: 100%; padding: 10px; margin: 20px 0; }
+    .movie { padding: 10px; border-bottom: 1px solid #ccc; }
+    .title { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h1>🎬 Movie Search</h1>
+
+<input id="search" placeholder="搜索电影..." />
+<div id="list"></div>
+
 <script>
 const list = document.getElementById("list");
 const input = document.getElementById("search");
@@ -8,19 +27,17 @@ fetch("movies.json")
   .then(res => res.json())
   .then(data => {
     movies = data;
-    render();   // ✅ 关键：必须调用
+    render();
   })
-  .catch(err => {
-    console.error("加载失败:", err);
-  });
+  .catch(err => console.error(err));
 
 function render(filter="") {
   list.innerHTML = "";
 
   movies
     .filter(m =>
-      m.title.toLowerCase().includes(filter.toLowerCase()) ||
-      m.tags.join("").includes(filter)
+      (m.title || "").toLowerCase().includes(filter.toLowerCase()) ||
+      (m.tags || []).join("").includes(filter)
     )
     .forEach(m => {
       const div = document.createElement("div");
@@ -29,7 +46,7 @@ function render(filter="") {
       div.innerHTML = `
         <div class="title">${m.title} (${m.year})</div>
         <div>评分：${m.rating}</div>
-        <div>${m.tags.map(t => `<span>#${t}</span>`).join(" ")}</div>
+        <div>${(m.tags || []).map(t => `#${t}`).join(" ")}</div>
       `;
 
       list.appendChild(div);
@@ -40,3 +57,6 @@ input.addEventListener("input", e => {
   render(e.target.value);
 });
 </script>
+
+</body>
+</html>
