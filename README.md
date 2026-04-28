@@ -16,7 +16,8 @@
 - 🔫 战争 → data/war
 - 🀄️ 中文 → data/chinese
 
-
+## 🎬 作者自用下载网址
+  https://www.btsj6.com
 
 
 ---
