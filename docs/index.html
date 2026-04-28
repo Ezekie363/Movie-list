@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>Movie List</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  
   <style>
     body { 
       font-family: Arial; 
@@ -38,6 +34,7 @@
       border-radius: 8px;
       margin: 10px 0;
       background: #f5f5f5;
+      cursor: pointer;
       transition: 0.2s;
     }
 
@@ -48,28 +45,23 @@
     .title { 
       font-weight: bold; 
       font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    /* ✅ 标签样式优化 */
-    .tags {
-      margin-top: 6px;
     }
 
     .tags span {
-      display: inline-block;
       margin-right: 6px;
-      padding: 3px 8px;
-      background: #e0e0e0;
-      border-radius: 12px;
+      color: #666;
       font-size: 12px;
-      color: #444;
-      cursor: pointer;
-      transition: 0.2s;
     }
 
-    .tags span:hover {
-      background: #d0d0d0;
+    .details {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #444;
+      display: none;
+    }
+
+    .details div {
+      margin: 4px 0;
     }
 
     .empty {
@@ -79,6 +71,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <h1>🎬 Movie Search</h1>
@@ -87,7 +80,6 @@
 
 <div class="controls">
 
-  <!-- 大类别 -->
   <select id="categoryFilter">
     <option value="">全部大类</option>
     <option value="action">🎬 动作</option>
@@ -102,12 +94,10 @@
     <option value="drama">🎦 剧情</option>
   </select>
 
-  <!-- 小类别 -->
   <select id="tagFilter">
     <option value="">全部标签</option>
   </select>
 
-  <!-- 排序 -->
   <select id="sortSelect">
     <option value="">默认排序</option>
     <option value="rating_desc">评分从高到低</option>
@@ -128,7 +118,7 @@ window.onload = () => {
 
   let movies = [];
 
-  fetch("movies.json")
+  fetch("movies.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
       movies = data;
@@ -174,7 +164,7 @@ window.onload = () => {
     list.innerHTML = "";
 
     if (filtered.length === 0) {
-      list.innerHTML = `<div class="empty">😢 没有找到匹配的电影</div>`;
+      list.innerHTML = `<div class="empty">没有找到电影 😢</div>`;
       return;
     }
 
@@ -184,23 +174,30 @@ window.onload = () => {
 
       div.innerHTML = `
         <div class="title">${m.title} (${m.year})</div>
-        <div>评分：${m.rating || "暂无"}</div>
+        <div>评分：${m.rating}</div>
+
         <div class="tags">
-          ${(m.tags || []).map(t => 
-            `<span onclick="quickFilter('${t}')">#${t}</span>`
-          ).join("")}
+          ${(m.tags || []).map(t => `<span>#${t}</span>`).join("")}
+        </div>
+
+        <div class="details">
+          <div>🎬 分类：${m.category || "未知"}</div>
+          <div>🎭 类型：${m.genre || "未知"}</div>
+          <div>🎬 导演：${m.director || "未知"}</div>
+          <div>👥 主演：${m.actors || "未知"}</div>
         </div>
       `;
+
+      // 👉 点击展开 / 收起
+      div.addEventListener("click", () => {
+        const details = div.querySelector(".details");
+        details.style.display = 
+          details.style.display === "block" ? "none" : "block";
+      });
 
       list.appendChild(div);
     });
   }
-
-  // ✅ 点击标签快速筛选
-  window.quickFilter = function(tag) {
-    tagFilter.value = tag;
-    render();
-  };
 
   input.addEventListener("input", render);
   tagFilter.addEventListener("change", render);
