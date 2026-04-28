@@ -16,6 +16,8 @@
 - 🔫 战争 → data/war
 - 🀄️ 中文 → data/chinese
 
+## 🔍 搜索页面
+  https://ezekie363.github.io/-Movie-list/index.html
 ## 🎬 作者自用下载网址
   https://www.btsj6.com
 
