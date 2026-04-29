@@ -30,7 +30,7 @@ jobs:
 
           mkdir -p data/$category
 
-          filepath="data/$category/$filename.md"
+          filepath="reviews/${title}.md"
 
           echo "📄 Creating file: $filepath"
 
