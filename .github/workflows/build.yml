@@ -2,7 +2,7 @@ name: Generate Movie JSON
 
 on:
   workflow_run:
-    workflows: ["issue-to-md"]   # ⚠️ 这里必须和你的另一个 workflow name 一致
+    workflows: ["issue-to-md"]
     types:
       - completed
 
@@ -26,15 +26,12 @@ jobs:
       - name: 安装依赖
         run: pip install pyyaml
 
-      # ✅ 生成电影数据
       - name: 生成 movies.json
         run: python scripts/generate_json.py
 
-      # ✅ 新增：生成影评数据
       - name: 生成 reviews.json
-        run: python scripts/generate_reviews.py
+        run: python scripts/generate_reviews_json.py   # ✅ 注意这个名字
 
-      # ✅ 一起提交
       - name: 提交 JSON 文件
         run: |
           git config user.name "github-actions"
