@@ -1,105 +1,116 @@
 [
   {
-    "title": "美国精神病人 American Psycho",
-    "year": 2000,
-    "category": "action",
-    "rating": 8.0,
+    "title": "怦然心动 Flipped",
+    "year": 2010,
+    "category": "romance",
+    "rating": 8.5,
     "tags": [
-      "心理",
-      "黑色幽默",
-      "人性",
-      "讽刺"
+      "爱情",
+      "青春",
+      "治愈",
+      "成长"
     ],
-    "director": "玛丽·哈伦",
-    "actors": "克里斯蒂安·贝尔",
-    "genre": "剧情 / 犯罪 / 惊悚"
+    "director": "罗伯·莱纳",
+    "actors": "玛德琳·卡罗尔 / 卡兰·麦克奥利菲",
+    "genre": "剧情 / 爱情"
   },
   {
-    "title": "猫鼠游戏 Catch Me If You Can",
-    "year": 2002,
-    "category": "action",
+    "title": "机器人之梦 Robot Dreams",
+    "year": 2023,
+    "category": "animation",
     "rating": 9.1,
     "tags": [
-      "犯罪动作",
-      "悬疑"
+      "励志",
+      "动画"
     ],
-    "director": "史蒂文·斯皮尔伯格",
-    "actors": "莱昂纳多·迪卡普里奥 / 汤姆·汉克斯",
+    "director": "巴勃罗·贝格尔",
+    "actors": "伊万·拉班达",
+    "genre": "剧情 / 动画 / 音乐"
+  },
+  {
+    "title": "攻壳特攻队",
+    "year": 1995,
+    "category": "animation",
+    "rating": 6.8,
+    "tags": [
+      "赛博朋克",
+      "押井守动画经典"
+    ],
+    "director": "押井守",
+    "actors": "田中敦子、大塚明夫、山寺宏一（配音）",
+    "genre": "科幻 / 动画 / 赛博朋克 / 悬疑"
+  },
+  {
+    "title": "蜘蛛侠：纵横宇宙 Spider-Man: Across the Spider-Verse",
+    "year": 2023,
+    "category": "animation",
+    "rating": 9.1,
+    "tags": [
+      "动画",
+      "多元宇宙",
+      "视觉震撼",
+      "超级英雄"
+    ],
+    "director": "乔伊姆·多斯·桑托斯 / 凯普·鲍尔斯 / 贾斯汀·K·汤普森",
+    "actors": "沙梅克·摩尔 / 海莉·斯坦菲尔德 / 奥斯卡·伊萨克",
+    "genre": "动画 / 动作 / 科幻"
+  },
+  {
+    "title": "孤独摇滚！剧场版",
+    "year": 2024,
+    "category": "animation",
+    "rating": 9.3,
+    "tags": [
+      "孤独摇滚",
+      "芳文社",
+      "音乐番",
+      "社恐治愈",
+      "动画剧场版"
+    ],
+    "director": "斋藤圭一郎",
+    "actors": "青山吉能（后藤独 配音）、铃代纱弓（山田凉 配音）、水野朔（伊地知虹夏 配音）、长谷川育美（喜多郁代 配音）",
+    "genre": "动画 / 音乐 / 喜剧 / 治愈"
+  },
+  {
+    "title": "低俗小说 Pulp Fiction",
+    "year": 1994,
+    "category": "comedy",
+    "rating": 8.9,
+    "tags": [
+      "低俗",
+      "暴力美学"
+    ],
+    "director": "昆汀·塔伦蒂诺",
+    "actors": "约翰·特拉沃尔塔 / 乌玛·瑟曼 / 阿曼达·普拉莫",
+    "genre": "剧情 / 喜剧 / 犯罪"
+  },
+  {
+    "title": "华尔街之狼 The Wolf of Wall Street",
+    "year": 2013,
+    "category": "comedy",
+    "rating": 8.1,
+    "tags": [
+      "金融",
+      "犯罪",
+      "18+"
+    ],
+    "director": "马丁·斯科塞斯",
+    "actors": "莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比",
     "genre": "剧情 / 传记 / 犯罪"
   },
   {
-    "title": "边境杀手 Sicario",
-    "year": 2015,
-    "category": "action",
-    "rating": 7.8,
+    "title": "白日梦想家 The Secret Life of Walter Mitty",
+    "year": 2013,
+    "category": "comedy",
+    "rating": 8.6,
     "tags": [
+      "励志",
       "剧情",
-      "惊悚",
-      "犯罪"
+      "冒险"
     ],
-    "director": "丹尼斯·维伦纽瓦",
-    "actors": "艾米莉·布朗特 / 本尼西奥·德尔·托罗 / 乔什·布洛林",
-    "genre": "动作/犯罪/毒品/边境"
-  },
-  {
-    "title": "搏击俱乐部 Fight Club",
-    "year": 1999,
-    "category": "action",
-    "rating": 9.0,
-    "tags": [
-      "反转",
-      "人性",
-      "哲学",
-      "经典"
-    ],
-    "director": "大卫·芬奇",
-    "actors": "布拉德·皮特 / 爱德华·诺顿",
-    "genre": "剧情"
-  },
-  {
-    "title": "洛城机密 L.A. Confidential",
-    "year": 1997,
-    "category": "action",
-    "rating": 8.7,
-    "tags": [
-      "犯罪",
-      "悬疑",
-      "黑色电影",
-      "经典"
-    ],
-    "director": "柯蒂斯·汉森",
-    "actors": "罗素·克劳 / 盖·皮尔斯 / 凯文·史派西",
-    "genre": "剧情 / 犯罪 / 悬疑"
-  },
-  {
-    "title": "杀人回忆 Memories of Murder",
-    "year": 2003,
-    "category": "action",
-    "rating": 9.0,
-    "tags": [
-      "犯罪",
-      "真实事件",
-      "压抑",
-      "经典"
-    ],
-    "director": "奉俊昊",
-    "actors": "宋康昊 / 金相庆",
-    "genre": "剧情 / 犯罪 / 惊悚"
-  },
-  {
-    "title": "GT赛车：极速狂飙 Gran Turismo",
-    "year": 2023,
-    "category": "action",
-    "rating": 7.5,
-    "tags": [
-      "赛车",
-      "真实改编",
-      "热血",
-      "游戏改编"
-    ],
-    "director": "尼尔·布洛姆坎普",
-    "actors": "阿奇·马德奎 / 大卫·哈伯 / 奥兰多·布鲁姆",
-    "genre": "剧情 / 动作 / 运动"
+    "director": "本·斯蒂勒",
+    "actors": "本·斯蒂勒 / 克里斯汀·韦格 / 亚当·斯科特",
+    "genre": "喜剧"
   },
   {
     "title": "加沙 Gaza",
@@ -129,87 +140,188 @@
     "genre": "纪录片"
   },
   {
-    "title": "低俗小说 Pulp Fiction",
-    "year": 1994,
-    "category": "comedy",
+    "title": "致命魔术 The Prestige",
+    "year": 2006,
+    "category": "sci-fi",
     "rating": 8.9,
     "tags": [
-      "低俗",
-      "暴力美学"
+      "悬疑",
+      "科幻",
+      "魔术"
     ],
-    "director": "昆汀·塔伦蒂诺",
-    "actors": "约翰·特拉沃尔塔 / 乌玛·瑟曼 / 阿曼达·普拉莫",
-    "genre": "剧情 / 喜剧 / 犯罪"
+    "director": "克里斯托弗·诺兰",
+    "actors": "休·杰克曼 / 克里斯蒂安·贝尔 / 迈克尔·凯恩 / 丽贝卡·豪尔",
+    "genre": "剧情 / 悬疑 / 惊悚"
   },
   {
-    "title": "白日梦想家 The Secret Life of Walter Mitty",
-    "year": 2013,
-    "category": "comedy",
-    "rating": 8.6,
+    "title": "2001太空漫游 2001: A Space Odyssey",
+    "year": 1968,
+    "category": "sci-fi",
+    "rating": 8.9,
     "tags": [
-      "励志",
+      "科幻",
       "剧情",
-      "冒险"
+      "哲学"
     ],
-    "director": "本·斯蒂勒",
-    "actors": "本·斯蒂勒 / 克里斯汀·韦格 / 亚当·斯科特",
-    "genre": "喜剧"
+    "director": "斯坦利·库布里克",
+    "actors": "凯尔·杜拉 / 加里·洛克伍德 / 威廉姆·西尔维斯特",
+    "genre": "科幻 / 惊悚 / 冒险"
   },
   {
-    "title": "华尔街之狼 The Wolf of Wall Street",
-    "year": 2013,
-    "category": "comedy",
-    "rating": 8.1,
+    "title": "Blade Runner 银翼杀手2049",
+    "year": 2017,
+    "category": "sci-fi",
+    "rating": 8.3,
     "tags": [
-      "金融",
-      "犯罪",
-      "18+"
+      "科幻",
+      "赛博朋克",
+      "仿生人"
     ],
-    "director": "马丁·斯科塞斯",
-    "actors": "莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比",
+    "director": "丹尼斯·维伦纽瓦",
+    "actors": "瑞恩·高斯林 / 哈里森·福特 / 安娜·德·阿玛斯",
+    "genre": "科幻"
+  },
+  {
+    "title": "盗梦空间 Inception",
+    "year": 2010,
+    "category": "sci-fi",
+    "rating": 9.0,
+    "tags": [
+      "烧脑",
+      "梦境"
+    ],
+    "director": "Christopher Nolan",
+    "actors": "Leonardo DiCaprio",
+    "genre": "Sci-Fi"
+  },
+  {
+    "title": "蝙蝠侠：黑暗骑士 The Dark Knight",
+    "year": 2008,
+    "category": "sci-fi",
+    "rating": 9.2,
+    "tags": [
+      "犯罪",
+      "超级英雄",
+      "黑暗",
+      "经典"
+    ],
+    "director": "克里斯托弗·诺兰",
+    "actors": "克里斯蒂安·贝尔 / 希斯·莱杰 / 亚伦·艾克哈特 / 迈克尔·凯恩",
+    "genre": "剧情 / 动作 / 犯罪"
+  },
+  {
+    "title": "边境杀手 Sicario",
+    "year": 2015,
+    "category": "action",
+    "rating": 7.8,
+    "tags": [
+      "剧情",
+      "惊悚",
+      "犯罪"
+    ],
+    "director": "丹尼斯·维伦纽瓦",
+    "actors": "艾米莉·布朗特 / 本尼西奥·德尔·托罗 / 乔什·布洛林",
+    "genre": "动作/犯罪/毒品/边境"
+  },
+  {
+    "title": "猫鼠游戏 Catch Me If You Can",
+    "year": 2002,
+    "category": "action",
+    "rating": 9.1,
+    "tags": [
+      "犯罪动作",
+      "悬疑"
+    ],
+    "director": "史蒂文·斯皮尔伯格",
+    "actors": "莱昂纳多·迪卡普里奥 / 汤姆·汉克斯",
     "genre": "剧情 / 传记 / 犯罪"
   },
   {
-    "title": "怦然心动 Flipped",
-    "year": 2010,
-    "category": "romance",
-    "rating": 8.5,
-    "tags": [
-      "爱情",
-      "青春",
-      "治愈",
-      "成长"
-    ],
-    "director": "罗伯·莱纳",
-    "actors": "玛德琳·卡罗尔 / 卡兰·麦克奥利菲",
-    "genre": "剧情 / 爱情"
-  },
-  {
-    "title": "卧虎藏龙",
-    "year": 2000,
-    "category": "chinese",
+    "title": "搏击俱乐部 Fight Club",
+    "year": 1999,
+    "category": "action",
     "rating": 9.0,
     "tags": [
-      "武侠",
-      "东方美学",
-      "爱情",
+      "反转",
+      "人性",
+      "哲学",
       "经典"
     ],
-    "director": "李安",
-    "actors": "周润发 / 杨紫琼 / 章子怡 / 张震",
-    "genre": "剧情 / 动作 / 爱情"
+    "director": "大卫·芬奇",
+    "actors": "布拉德·皮特 / 爱德华·诺顿",
+    "genre": "剧情"
   },
   {
-    "title": "芳华",
-    "year": 2017,
-    "category": "chinese",
-    "rating": 7.7,
+    "title": "杀人回忆 Memories of Murder",
+    "year": 2003,
+    "category": "action",
+    "rating": 9.0,
     "tags": [
-      "历史"
+      "犯罪",
+      "真实事件",
+      "压抑",
+      "经典"
     ],
-    "director": "冯小刚",
-    "actors": "黄轩 / 苗苗 / 钟楚曦",
-    "genre": "剧情 / 历史 / 战争"
+    "director": "奉俊昊",
+    "actors": "宋康昊 / 金相庆",
+    "genre": "剧情 / 犯罪 / 惊悚"
+  },
+  {
+    "title": "洛城机密 L.A. Confidential",
+    "year": 1997,
+    "category": "action",
+    "rating": 8.7,
+    "tags": [
+      "犯罪",
+      "悬疑",
+      "黑色电影",
+      "经典"
+    ],
+    "director": "柯蒂斯·汉森",
+    "actors": "罗素·克劳 / 盖·皮尔斯 / 凯文·史派西",
+    "genre": "剧情 / 犯罪 / 悬疑"
+  },
+  {
+    "title": "GT赛车：极速狂飙 Gran Turismo",
+    "year": 2023,
+    "category": "action",
+    "rating": 7.5,
+    "tags": [
+      "赛车",
+      "真实改编",
+      "热血",
+      "游戏改编"
+    ],
+    "director": "尼尔·布洛姆坎普",
+    "actors": "阿奇·马德奎 / 大卫·哈伯 / 奥兰多·布鲁姆",
+    "genre": "剧情 / 动作 / 运动"
+  },
+  {
+    "title": "美国精神病人 American Psycho",
+    "year": 2000,
+    "category": "action",
+    "rating": 8.0,
+    "tags": [
+      "心理",
+      "黑色幽默",
+      "人性",
+      "讽刺"
+    ],
+    "director": "玛丽·哈伦",
+    "actors": "克里斯蒂安·贝尔",
+    "genre": "剧情 / 犯罪 / 惊悚"
+  },
+  {
+    "title": "火车梦 Train Dreams",
+    "year": 2025,
+    "category": "family",
+    "rating": 8.3,
+    "tags": [
+      "普通伐木工的一生"
+    ],
+    "director": "克林特·本特利",
+    "actors": "乔尔·埃哲顿 / 菲丽希缇·琼斯",
+    "genre": "剧情"
   },
   {
     "title": "海边的曼彻斯特 Manchester by the Sea",
@@ -264,142 +376,30 @@
     "genre": "剧情 / 冒险"
   },
   {
-    "title": "火车梦 Train Dreams",
-    "year": 2025,
-    "category": "family",
-    "rating": 8.3,
-    "tags": [
-      "普通伐木工的一生"
-    ],
-    "director": "克林特·本特利",
-    "actors": "乔尔·埃哲顿 / 菲丽希缇·琼斯",
-    "genre": "剧情"
-  },
-  {
-    "title": "盗梦空间 Inception",
-    "year": 2010,
-    "category": "sci-fi",
+    "title": "卧虎藏龙",
+    "year": 2000,
+    "category": "chinese",
     "rating": 9.0,
     "tags": [
-      "烧脑",
-      "梦境"
-    ],
-    "director": "Christopher Nolan",
-    "actors": "Leonardo DiCaprio",
-    "genre": "Sci-Fi"
-  },
-  {
-    "title": "蝙蝠侠：黑暗骑士 The Dark Knight",
-    "year": 2008,
-    "category": "sci-fi",
-    "rating": 9.2,
-    "tags": [
-      "犯罪",
-      "超级英雄",
-      "黑暗",
+      "武侠",
+      "东方美学",
+      "爱情",
       "经典"
     ],
-    "director": "克里斯托弗·诺兰",
-    "actors": "克里斯蒂安·贝尔 / 希斯·莱杰 / 亚伦·艾克哈特 / 迈克尔·凯恩",
-    "genre": "剧情 / 动作 / 犯罪"
+    "director": "李安",
+    "actors": "周润发 / 杨紫琼 / 章子怡 / 张震",
+    "genre": "剧情 / 动作 / 爱情"
   },
   {
-    "title": "Blade Runner 银翼杀手2049",
+    "title": "芳华",
     "year": 2017,
-    "category": "sci-fi",
-    "rating": 8.3,
+    "category": "chinese",
+    "rating": 7.7,
     "tags": [
-      "科幻",
-      "赛博朋克",
-      "仿生人"
+      "历史"
     ],
-    "director": "丹尼斯·维伦纽瓦",
-    "actors": "瑞恩·高斯林 / 哈里森·福特 / 安娜·德·阿玛斯",
-    "genre": "科幻"
-  },
-  {
-    "title": "致命魔术 The Prestige",
-    "year": 2006,
-    "category": "sci-fi",
-    "rating": 8.9,
-    "tags": [
-      "悬疑",
-      "科幻",
-      "魔术"
-    ],
-    "director": "克里斯托弗·诺兰",
-    "actors": "休·杰克曼 / 克里斯蒂安·贝尔 / 迈克尔·凯恩 / 丽贝卡·豪尔",
-    "genre": "剧情 / 悬疑 / 惊悚"
-  },
-  {
-    "title": "2001太空漫游 2001: A Space Odyssey",
-    "year": 1968,
-    "category": "sci-fi",
-    "rating": 8.9,
-    "tags": [
-      "科幻",
-      "剧情",
-      "哲学"
-    ],
-    "director": "斯坦利·库布里克",
-    "actors": "凯尔·杜拉 / 加里·洛克伍德 / 威廉姆·西尔维斯特",
-    "genre": "科幻 / 惊悚 / 冒险"
-  },
-  {
-    "title": "蜘蛛侠：纵横宇宙 Spider-Man: Across the Spider-Verse",
-    "year": 2023,
-    "category": "animation",
-    "rating": 9.1,
-    "tags": [
-      "动画",
-      "多元宇宙",
-      "视觉震撼",
-      "超级英雄"
-    ],
-    "director": "乔伊姆·多斯·桑托斯 / 凯普·鲍尔斯 / 贾斯汀·K·汤普森",
-    "actors": "沙梅克·摩尔 / 海莉·斯坦菲尔德 / 奥斯卡·伊萨克",
-    "genre": "动画 / 动作 / 科幻"
-  },
-  {
-    "title": "孤独摇滚！剧场版",
-    "year": 2024,
-    "category": "animation",
-    "rating": 9.3,
-    "tags": [
-      "孤独摇滚",
-      "芳文社",
-      "音乐番",
-      "社恐治愈",
-      "动画剧场版"
-    ],
-    "director": "斋藤圭一郎",
-    "actors": "青山吉能（后藤独 配音）、铃代纱弓（山田凉 配音）、水野朔（伊地知虹夏 配音）、长谷川育美（喜多郁代 配音）",
-    "genre": "动画 / 音乐 / 喜剧 / 治愈"
-  },
-  {
-    "title": "攻壳特攻队",
-    "year": 1995,
-    "category": "animation",
-    "rating": 6.8,
-    "tags": [
-      "赛博朋克",
-      "押井守动画经典"
-    ],
-    "director": "押井守",
-    "actors": "田中敦子、大塚明夫、山寺宏一（配音）",
-    "genre": "科幻 / 动画 / 赛博朋克 / 悬疑"
-  },
-  {
-    "title": "机器人之梦 Robot Dreams",
-    "year": 2023,
-    "category": "animation",
-    "rating": 9.1,
-    "tags": [
-      "励志",
-      "动画"
-    ],
-    "director": "巴勃罗·贝格尔",
-    "actors": "伊万·拉班达",
-    "genre": "剧情 / 动画 / 音乐"
+    "director": "冯小刚",
+    "actors": "黄轩 / 苗苗 / 钟楚曦",
+    "genre": "剧情 / 历史 / 战争"
   }
 ]
