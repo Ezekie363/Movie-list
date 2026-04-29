@@ -4,12 +4,15 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  contents: write   # ✅ 关键：允许push代码
+
 jobs:
   convert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Create markdown file from issue
@@ -17,20 +20,29 @@ jobs:
           title="${{ github.event.issue.title }}"
           body="${{ github.event.issue.body }}"
 
-          # 生成文件名（去空格）
-          filename=$(echo "$title" | tr ' ' '-' | tr -cd '[:alnum:]-')
+          echo "📌 Issue Title: $title"
 
-          # 默认分类（你可以后面优化）
+          # ✅ 文件名（支持中文 + 去空格）
+          filename=$(echo "$title" | sed 's/[[:space:]]/-/g')
+
+          # ❗ 默认分类（后面可以升级自动分类）
           category="action"
 
           mkdir -p data/$category
 
-          echo "$body" > data/$category/$filename.md
+          filepath="data/$category/$filename.md"
 
-      - name: Commit changes
+          echo "📄 Creating file: $filepath"
+
+          echo "$body" > "$filepath"
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+
           git add .
-          git commit -m "Add movie from issue" || echo "No changes"
+
+          git commit -m "✨ Add movie from issue: ${{ github.event.issue.title }}" || echo "No changes"
+
           git push
