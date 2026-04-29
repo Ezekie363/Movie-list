@@ -21,26 +21,43 @@ jobs:
 
           mkdir -p reviews
 
-          # 提取字段
-          movie=$(echo "$body" | grep "🎬 电影名称" -A1 | tail -n1)
-          rating=$(echo "$body" | grep "⭐ 评分" -A1 | tail -n1)
-          content=$(echo "$body" | grep "📝 评价内容" -A5 | tail -n+2)
+          echo "📌 原始 Issue 内容："
+          echo "$body"
 
+          # ✅ 稳定解析（适配 GitHub Issue Form）
+          movie=$(echo "$body" | awk '/🎬 电影名称/{getline; print}')
+          rating=$(echo "$body" | awk '/⭐ 评分/{getline; print}')
+          content=$(echo "$body" | awk '/📝 评价内容/{flag=1; next} flag')
+
+          # ✅ 清理空行/空格
           movie=$(echo "$movie" | xargs)
           rating=$(echo "$rating" | xargs)
+          content=$(echo "$content" | sed '/^$/d')
 
+          echo "🎬 movie=$movie"
+          echo "⭐ rating=$rating"
+          echo "📝 content=$content"
+
+          # ❗ 防止解析失败
+          if [ -z "$movie" ]; then
+            echo "❌ movie 解析失败"
+            exit 1
+          fi
+
+          # ✅ 文件名安全（支持中文）
           safe_title=$(echo "$movie" | tr -d '[]:/\\?*"<>|' | tr ' ' '_')
 
           file="reviews/${safe_title}.md"
 
           echo "📄 Creating file: $file"
 
+          # ✅ 写入结构化数据
           echo "title: $movie" > "$file"
           echo "rating: $rating" >> "$file"
           echo "review: |" >> "$file"
           echo "$content" >> "$file"
 
-      - name: 提交文件
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
