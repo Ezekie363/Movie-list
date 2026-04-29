@@ -60,8 +60,12 @@
       display: none;
     }
 
-    .details div {
-      margin: 4px 0;
+    .review {
+      margin-top: 6px;
+      padding: 6px;
+      background: #fff;
+      border-radius: 6px;
+      font-size: 12px;
     }
 
     .empty {
@@ -117,13 +121,25 @@ window.onload = () => {
   const categoryFilter = document.getElementById("categoryFilter");
 
   let movies = [];
+  let reviews = [];
 
+  // 👉 加载电影
   fetch("movies.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
       movies = data;
       initTags();
       render();
+    });
+
+  // 👉 加载评论
+  fetch("reviews.json?t=" + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      reviews = data;
+    })
+    .catch(() => {
+      reviews = [];
     });
 
   function initTags() {
@@ -136,6 +152,10 @@ window.onload = () => {
       option.textContent = tag;
       tagFilter.appendChild(option);
     });
+  }
+
+  function getReviews(title) {
+    return reviews.filter(r => r.title === title);
   }
 
   function render() {
@@ -169,6 +189,8 @@ window.onload = () => {
     }
 
     filtered.forEach(m => {
+      const movieReviews = getReviews(m.title);
+
       const div = document.createElement("div");
       div.className = "movie";
 
@@ -185,13 +207,24 @@ window.onload = () => {
           <div>🎭 类型：${m.genre || "未知"}</div>
           <div>🎦 导演：${m.director || "未知"}</div>
           <div>👥 主演：${m.actors || "未知"}</div>
+
+          <div style="margin-top:8px;"><b>💬 用户评价：</b></div>
+          ${
+            movieReviews.length > 0
+              ? movieReviews.map(r => `
+                <div class="review">
+                  <div>👤 ${r.user}（${r.rating}/10）</div>
+                  <div>${r.content}</div>
+                </div>
+              `).join("")
+              : `<div class="review">暂无评价</div>`
+          }
         </div>
       `;
 
-      // 👉 点击展开 / 收起
       div.addEventListener("click", () => {
         const details = div.querySelector(".details");
-        details.style.display = 
+        details.style.display =
           details.style.display === "block" ? "none" : "block";
       });
 
