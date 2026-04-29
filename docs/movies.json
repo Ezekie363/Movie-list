@@ -401,5 +401,19 @@
     "director": "冯小刚",
     "actors": "黄轩 / 苗苗 / 钟楚曦",
     "genre": "剧情 / 历史 / 战争"
+  },
+  {
+    "title": "美国往事 Once Upon a Time in America",
+    "year": 1984,
+    "category": "drama",
+    "rating": 9.7,
+    "tags": [
+      "黑帮史诗",
+      "宿命",
+      "记忆与幻觉"
+    ],
+    "director": "赛尔乔·莱昂内 Sergio Leone",
+    "actors": "罗伯特·德尼罗、詹姆斯·伍兹、伊丽莎白·麦戈文",
+    "genre": "犯罪 / 剧情 / 黑帮"
   }
 ]
