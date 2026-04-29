@@ -2,7 +2,7 @@ name: Generate Movie JSON
 
 on:
   workflow_run:
-    workflows: ["Issue to Markdown"]   # ⚠️ 必须和你的另一个 workflow 名字完全一致
+    workflows: ["issue-to-md"]   # ⚠️ 必须和你的另一个 workflow 名字完全一致
     types:
       - completed
 
