@@ -56,11 +56,12 @@
     }
 
     .review {
-      margin-top: 6px;
-      padding: 6px;
+      margin-top: 8px;
+      padding: 8px;
       background: #fff;
       border-radius: 6px;
       font-size: 12px;
+      border-left: 3px solid #999;
     }
   </style>
 </head>
@@ -110,7 +111,9 @@ window.onload = () => {
   let movies = [];
   let reviews = [];
 
-  // ✅ 加载电影
+  // =========================
+  // 加载电影
+  // =========================
   fetch("movies.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
@@ -119,7 +122,9 @@ window.onload = () => {
       render();
     });
 
-  // ✅ 加载影评
+  // =========================
+  // 加载影评
+  // =========================
   fetch("reviews.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
@@ -165,9 +170,13 @@ window.onload = () => {
 
     filtered.forEach(m => {
 
-      // ✅ 找影评
+      // =========================
+      // 匹配影评（更稳定）
+      // =========================
       const movieReviews = reviews.filter(r =>
-        r.title && m.title && r.title.includes(m.title)
+        r.title &&
+        m.title &&
+        r.title.replace(/\(.*?\)/g, "").trim() === m.title.replace(/\(.*?\)/g, "").trim()
       );
 
       const div = document.createElement("div");
@@ -187,10 +196,16 @@ window.onload = () => {
           <div>🎦 导演：${m.director || "未知"}</div>
           <div>👥 主演：${m.actors || "未知"}</div>
 
-          <div style="margin-top:6px;">💭 影评：</div>
+          <div style="margin-top:8px;">💭 影评：</div>
+
           ${
             movieReviews.length > 0
-              ? movieReviews.map(r => `<div class="review">${r.review}</div>`).join("")
+              ? movieReviews.map(r => `
+                  <div class="review">
+                    <div>⭐ 评分：${r.rating || "未知"} / 10</div>
+                    <div style="margin-top:4px;">${r.review || "暂无内容"}</div>
+                  </div>
+                `).join("")
               : "<div class='review'>暂无影评</div>"
           }
         </div>
