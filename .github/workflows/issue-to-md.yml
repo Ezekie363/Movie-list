@@ -15,26 +15,33 @@ jobs:
       - name: Checkout 仓库
         uses: actions/checkout@v4
 
-      - name: Create markdown from issue
-        run: |
-          title="${{ github.event.issue.title }}"
-          body="${{ github.event.issue.body }}"
+- name: Create markdown from issue
+  run: |
+    body="${{ github.event.issue.body }}"
 
-          echo "📌 Issue Title: $title"
+    mkdir -p reviews
 
-          # ✅ 创建目录
-          mkdir -p reviews
+    # ✅ 提取字段（按你的模板）
+    movie=$(echo "$body" | grep "🎬 电影名称" -A1 | tail -n1)
+    rating=$(echo "$body" | grep "⭐ 评分" -A1 | tail -n1)
+    content=$(echo "$body" | grep "📝 评价内容" -A5 | tail -n+2)
 
-          # ✅ 处理文件名（核心修复）
-          safe_title=$(echo "$title" | tr -d '[]:/\\?*"<>|' | tr ' ' '_')
+    # ✅ 清理空格
+    movie=$(echo "$movie" | xargs)
+    rating=$(echo "$rating" | xargs)
 
-          file="reviews/${safe_title}.md"
+    # ✅ 文件名安全处理
+    safe_title=$(echo "$movie" | tr -d '[]:/\\?*"<>|' | tr ' ' '_')
 
-          echo "📄 Creating file: $file"
+    file="reviews/${safe_title}.md"
 
-          echo "# 🎬 $title" > "$file"
-          echo "" >> "$file"
-          echo "$body" >> "$file"
+    echo "📄 Creating file: $file"
+
+    # ✅ 写入结构化数据
+    echo "title: $movie" > "$file"
+    echo "rating: $rating" >> "$file"
+    echo "review: |" >> "$file"
+    echo "$content" >> "$file"
 
       - name: 提交文件
         run: |
