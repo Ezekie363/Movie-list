@@ -22,11 +22,11 @@ jobs:
 
           echo "📌 Issue Title: $title"
 
-          # ✅ 创建目录（防止不存在）
+          # ✅ 创建目录
           mkdir -p reviews
 
-          # ✅ 清洗文件名（去掉特殊字符）
-          safe_title=$(echo "$title" | sed 's/[^a-zA-Z0-9一-龥_-]//g')
+          # ✅ 处理文件名（核心修复）
+          safe_title=$(echo "$title" | tr -d '[]:/\\?*"<>|' | tr ' ' '_')
 
           file="reviews/${safe_title}.md"
 
