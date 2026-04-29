@@ -12,33 +12,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 仓库
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create markdown from issue
+      - name: Create markdown
         run: |
           body="${{ github.event.issue.body }}"
 
           mkdir -p reviews
 
-          echo "📌 原始 Issue 内容："
+          echo "📌 RAW:"
           echo "$body"
 
-          # ✅ 更宽松匹配（适配 ### 标题）
-          movie=$(echo "$body" | awk '/电影名称/{getline; print}')
-          rating=$(echo "$body" | awk '/评分/{getline; print}')
-          content=$(echo "$body" | awk '/评价内容/{flag=1; next} flag')
+          # =========================
+          # ✅ 核心修复（跳过空行）
+          # =========================
 
-          # ✅ 清理
-          movie=$(echo "$movie" | xargs)
-          rating=$(echo "$rating" | xargs)
+          movie=$(echo "$body" | grep -A2 "电影名称" | tail -n1)
+          rating=$(echo "$body" | grep -A2 "评分" | tail -n1)
+
+          # 评价内容（取最后一个 section）
+          content=$(echo "$body" | awk '
+            /评价内容/ {flag=1; next}
+            flag
+          ')
+
+          # 清理
+          movie=$(echo "$movie" | sed '/^$/d' | xargs)
+          rating=$(echo "$rating" | sed '/^$/d' | xargs)
           content=$(echo "$content" | sed '/^$/d')
 
           echo "🎬 movie=$movie"
           echo "⭐ rating=$rating"
           echo "📝 content=$content"
 
-          # ❗ 防止解析失败
+          # ❗ 防止空值
           if [ -z "$movie" ]; then
             echo "❌ movie 解析失败"
             exit 1
@@ -48,18 +56,18 @@ jobs:
 
           file="reviews/${safe_title}.md"
 
-          echo "📄 Creating file: $file"
+          echo "📄 $file"
 
           echo "title: $movie" > "$file"
           echo "rating: $rating" >> "$file"
           echo "review: |" >> "$file"
           echo "$content" >> "$file"
 
-      - name: Commit and push
+      - name: Commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add reviews/
-          git commit -m "auto: add review from issue" || echo "No changes"
+          git commit -m "auto: review" || echo "no changes"
           git push
