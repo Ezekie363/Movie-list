@@ -69,7 +69,7 @@ EOF
 
       - name: 🔄 Generate JSON
         run: |
-          python3 your_script.py
+          generate_json.py
 
       - name: 🚀 Commit
         run: |
