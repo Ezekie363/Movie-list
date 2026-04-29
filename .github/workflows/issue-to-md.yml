@@ -1,82 +1,36 @@
-name: Issue to Movie
+name: Issue to Markdown
 
 on:
   issues:
-    types: [opened, edited, reopened]
-
-permissions:
-  contents: write
+    types: [opened]
 
 jobs:
-  build:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 📝 Save Issue
+      - name: Create markdown file from issue
         run: |
-          echo "${{ github.event.issue.body }}" > issue.txt
+          title="${{ github.event.issue.title }}"
+          body="${{ github.event.issue.body }}"
 
-      - name: 🛠 Generate MD
-        run: |
-          cat << 'EOF' > generate.py
-          import re, os
+          # 生成文件名（去空格）
+          filename=$(echo "$title" | tr ' ' '-' | tr -cd '[:alnum:]-')
 
-          with open("issue.txt", "r", encoding="utf-8") as f:
-              text = f.read()
+          # 默认分类（你可以后面优化）
+          category="action"
 
-          def get(label):
-              match = re.search(rf"{label}.*?\n(.*)", text)
-              return match.group(1).strip() if match else ""
+          mkdir -p data/$category
 
-          title = get("电影名称")
-          director = get("导演")
-          actors = get("主演")
-          genre = get("类型")
-          rating = get("评分")
-          tags = get("标签")
-          intro = get("简介")
+          echo "$body" > data/$category/$filename.md
 
-          if not title:
-              print("❌ 没有识别到电影名称")
-              exit()
-
-          os.makedirs("data/auto", exist_ok=True)
-
-          filename = f"data/auto/{title}.md"
-
-          content = f"""# 🎬 {title}
-
-          - 导演：{director}
-          - 主演：{actors}
-          - 类型：{genre}
-          - 评分（1-10）：{rating}
-          - 标签：{tags}
-
-          ---
-
-          ## 📖 简介
-          {intro}
-          """
-
-          with open(filename, "w", encoding="utf-8") as f:
-              f.write(content)
-
-          print("✅ 生成:", filename)
-          EOF
-
-          python3 generate.py
-
-      - name: 🔄 Generate JSON
-        run: |
-          python3 generate_json.py   # 👉 改成你的脚本名
-
-      - name: 🚀 Commit
+      - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "auto: add movie from issue" || echo "no changes"
+          git commit -m "Add movie from issue" || echo "No changes"
           git push
