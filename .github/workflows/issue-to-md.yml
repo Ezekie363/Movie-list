@@ -1,0 +1,80 @@
+name: Issue to Movie
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 📝 Save Issue
+        run: |
+          echo "${{ github.event.issue.body }}" > issue.txt
+
+      - name: 🛠 Generate MD
+        run: |
+          python3 <<EOF
+import re, os
+
+with open("issue.txt", "r", encoding="utf-8") as f:
+    text = f.read()
+
+def get(label):
+    match = re.search(rf"{label}.*?\n(.*)", text)
+    return match.group(1).strip() if match else ""
+
+title = get("电影名称")
+director = get("导演")
+actors = get("主演")
+genre = get("类型")
+rating = get("评分")
+tags = get("标签")
+intro = get("简介")
+
+if not title:
+    print("❌ 没有识别到电影名称")
+    exit()
+
+os.makedirs("data/auto", exist_ok=True)
+
+filename = f"data/auto/{title}.md"
+
+content = f"""# 🎬 {title}
+
+- 导演：{director}
+- 主演：{actors}
+- 类型：{genre}
+- 评分（1-10）：{rating}
+- 标签：{tags}
+
+---
+
+## 📖 简介
+{intro}
+"""
+
+with open(filename, "w", encoding="utf-8") as f:
+    f.write(content)
+
+print("✅ 生成:", filename)
+EOF
+
+      - name: 🔄 Generate JSON
+        run: |
+          python3 your_script.py
+
+      - name: 🚀 Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "auto: add movie from issue" || echo "no changes"
+          git push
