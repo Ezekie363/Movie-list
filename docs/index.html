@@ -7,20 +7,30 @@
   <style>
     body { 
       font-family: Arial; 
-      max-width: 800px; 
-      margin: auto; 
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    /* ✅ 新增：统一容器（关键修复） */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 0 10px;
     }
 
     input { 
-      width: 100%; 
+      width: 100%;
       padding: 10px; 
       margin: 10px 0; 
+      box-sizing: border-box;
     }
 
     .controls {
       display: flex;
       gap: 10px;
       margin-bottom: 10px;
+      width: 100%;
     }
 
     .controls select {
@@ -65,52 +75,61 @@
     }
 
     .subtitle {
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  margin-top: -5px;
-  margin-bottom: 15px;
-}
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-top: -5px;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 
 <body>
 
-<div style="text-align:center;">
-  <h1 style="font-size:34px; font-weight:800; margin-bottom:5px;">
-    🎬 Movie Search
-  </h1>
-  <div class="subtitle">这是一个共享电影表单</div>
+<div class="container">
+
+  <!-- 标题 -->
+  <div style="text-align:center;">
+    <h1 style="font-size:42px; font-weight:900; margin-bottom:6px;">
+      🎬 Movie Search
+    </h1>
+    <div class="subtitle">这是一个共享电影表单</div>
+  </div>
+
+  <!-- 搜索框 -->
+  <input id="search" placeholder="搜索电影 / 标签..." />
+
+  <!-- 筛选栏 -->
+  <div class="controls">
+    <select id="categoryFilter">
+      <option value="">全部大类</option>
+      <option value="action">🎬 动作</option>
+      <option value="romance">💕 爱情</option>
+      <option value="sci-fi">🚀 科幻</option>
+      <option value="comedy">😂 喜剧</option>
+      <option value="animation">🎨 动画</option>
+      <option value="documentary">📝 纪录</option>
+      <option value="family">🧑‍🧑‍🧒 家庭</option>
+      <option value="war">🔫 战争</option>
+      <option value="chinese">🀄️ 中文</option>
+      <option value="drama">🎦 剧情</option>
+    </select>
+
+    <select id="tagFilter">
+      <option value="">全部标签</option>
+    </select>
+
+    <select id="sortSelect">
+      <option value="">默认排序</option>
+      <option value="rating_desc">评分从高到低</option>
+      <option value="rating_asc">评分从低到高</option>
+    </select>
+  </div>
+
+  <!-- 列表 -->
+  <div id="list"></div>
+
 </div>
-<input id="search" placeholder="搜索电影 / 标签..." />
-
-<div class="controls">
-  <select id="categoryFilter">
-    <option value="">全部大类</option>
-    <option value="action">🎬 动作</option>
-    <option value="romance">💕 爱情</option>
-    <option value="sci-fi">🚀 科幻</option>
-    <option value="comedy">😂 喜剧</option>
-    <option value="animation">🎨 动画</option>
-    <option value="documentary">📝 纪录</option>
-    <option value="family">🧑‍🧑‍🧒 家庭</option>
-    <option value="war">🔫 战争</option>
-    <option value="chinese">🀄️ 中文</option>
-    <option value="drama">🎦 剧情</option>
-  </select>
-
-  <select id="tagFilter">
-    <option value="">全部标签</option>
-  </select>
-
-  <select id="sortSelect">
-    <option value="">默认排序</option>
-    <option value="rating_desc">评分从高到低</option>
-    <option value="rating_asc">评分从低到高</option>
-  </select>
-</div>
-
-<div id="list"></div>
 
 <script>
 window.onload = () => {
@@ -123,9 +142,6 @@ window.onload = () => {
   let movies = [];
   let reviews = [];
 
-  // =========================
-  // 加载电影
-  // =========================
   fetch("movies.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
@@ -134,9 +150,6 @@ window.onload = () => {
       render();
     });
 
-  // =========================
-  // 加载影评
-  // =========================
   fetch("reviews.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
@@ -182,9 +195,6 @@ window.onload = () => {
 
     filtered.forEach(m => {
 
-      // =========================
-      // 匹配影评（更稳定）
-      // =========================
       const movieReviews = reviews.filter(r =>
         r.title &&
         m.title &&
