@@ -1,48 +1,46 @@
-name: Issue to Markdown
+name: issue-to-md
 
 on:
   issues:
     types: [opened]
 
 permissions:
-  contents: write   # ✅ 关键：允许push代码
+  contents: write
 
 jobs:
   convert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout 仓库
         uses: actions/checkout@v4
 
-      - name: Create markdown file from issue
+      - name: Create markdown from issue
         run: |
           title="${{ github.event.issue.title }}"
           body="${{ github.event.issue.body }}"
 
           echo "📌 Issue Title: $title"
 
-          # ✅ 文件名（支持中文 + 去空格）
-          filename=$(echo "$title" | sed 's/[[:space:]]/-/g')
+          # ✅ 创建目录（防止不存在）
+          mkdir -p reviews
 
-          # ❗ 默认分类（后面可以升级自动分类）
-          category="action"
+          # ✅ 清洗文件名（去掉特殊字符）
+          safe_title=$(echo "$title" | sed 's/[^a-zA-Z0-9一-龥_-]//g')
 
-          mkdir -p data/$category
+          file="reviews/${safe_title}.md"
 
-          filepath="reviews/${title}.md"
+          echo "📄 Creating file: $file"
 
-          echo "📄 Creating file: $filepath"
+          echo "# 🎬 $title" > "$file"
+          echo "" >> "$file"
+          echo "$body" >> "$file"
 
-          echo "$body" > "$filepath"
-
-      - name: Commit and push
+      - name: 提交文件
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.email "github-actions@github.com"
 
-          git add .
-
-          git commit -m "✨ Add movie from issue: ${{ github.event.issue.title }}" || echo "No changes"
-
+          git add reviews/
+          git commit -m "auto: add review from issue" || echo "No changes"
           git push
