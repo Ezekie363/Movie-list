@@ -35,11 +35,6 @@
       margin: 10px 0;
       background: #f5f5f5;
       cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .movie:hover {
-      background: #eaeaea;
     }
 
     .title { 
@@ -67,12 +62,6 @@
       border-radius: 6px;
       font-size: 12px;
     }
-
-    .empty {
-      text-align: center;
-      color: #888;
-      margin-top: 20px;
-    }
   </style>
 </head>
 
@@ -83,7 +72,6 @@
 <input id="search" placeholder="搜索电影 / 标签..." />
 
 <div class="controls">
-
   <select id="categoryFilter">
     <option value="">全部大类</option>
     <option value="action">🎬 动作</option>
@@ -107,7 +95,6 @@
     <option value="rating_desc">评分从高到低</option>
     <option value="rating_asc">评分从低到高</option>
   </select>
-
 </div>
 
 <div id="list"></div>
@@ -123,7 +110,7 @@ window.onload = () => {
   let movies = [];
   let reviews = [];
 
-  // 👉 加载电影
+  // ✅ 加载电影
   fetch("movies.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
@@ -132,14 +119,11 @@ window.onload = () => {
       render();
     });
 
-  // 👉 加载评论
+  // ✅ 加载影评
   fetch("reviews.json?t=" + Date.now())
     .then(res => res.json())
     .then(data => {
       reviews = data;
-    })
-    .catch(() => {
-      reviews = [];
     });
 
   function initTags() {
@@ -152,10 +136,6 @@ window.onload = () => {
       option.textContent = tag;
       tagFilter.appendChild(option);
     });
-  }
-
-  function getReviews(title) {
-    return reviews.filter(r => r.title === title);
   }
 
   function render() {
@@ -183,13 +163,12 @@ window.onload = () => {
 
     list.innerHTML = "";
 
-    if (filtered.length === 0) {
-      list.innerHTML = `<div class="empty">没有找到电影 😢</div>`;
-      return;
-    }
-
     filtered.forEach(m => {
-      const movieReviews = getReviews(m.title);
+
+      // ✅ 找影评
+      const movieReviews = reviews.filter(r =>
+        r.title && m.title && r.title.includes(m.title)
+      );
 
       const div = document.createElement("div");
       div.className = "movie";
@@ -208,16 +187,11 @@ window.onload = () => {
           <div>🎦 导演：${m.director || "未知"}</div>
           <div>👥 主演：${m.actors || "未知"}</div>
 
-          <div style="margin-top:8px;"><b>💬 用户评价：</b></div>
+          <div style="margin-top:6px;">💭 影评：</div>
           ${
             movieReviews.length > 0
-              ? movieReviews.map(r => `
-                <div class="review">
-                  <div>👤 ${r.user}（${r.rating}/10）</div>
-                  <div>${r.content}</div>
-                </div>
-              `).join("")
-              : `<div class="review">暂无评价</div>`
+              ? movieReviews.map(r => `<div class="review">${r.review}</div>`).join("")
+              : "<div class='review'>暂无影评</div>"
           }
         </div>
       `;
