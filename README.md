@@ -21,7 +21,8 @@
 ---
 ## 🔍 电影检索页面
   https://ezekie363.github.io/Movie-list/index.html
-  
+  <img width="1470" height="753" alt="image" src="https://github.com/user-attachments/assets/49c9bcdf-6908-47cb-a08c-7c2320acbffd" />
+
 ---  
 ## 🎬 作者自用电影下载网址
   https://www.btsj6.com
