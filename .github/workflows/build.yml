@@ -1,21 +1,25 @@
 name: Generate Movie JSON
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Issue to Markdown"]   # ⚠️ 必须和你的另一个 workflow 名字完全一致
+    types:
+      - completed
 
 permissions:
-  contents: write   # ✅ 关键：允许自动 push
+  contents: write
 
 jobs:
   build:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout 仓库
-        uses: actions/checkout@v4   # ✅ 升级版本
+        uses: actions/checkout@v4
 
       - name: 设置 Python
-        uses: actions/setup-python@v5   # ✅ 升级版本
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -29,6 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add docs/movies.json
           git commit -m "auto: update movies.json" || echo "No changes"
           git push
