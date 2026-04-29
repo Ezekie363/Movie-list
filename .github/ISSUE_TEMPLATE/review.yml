@@ -1,33 +1,32 @@
-name: 🎬 Add Movie Review
-description: 提交电影评价
-title: "[Review] 电影名"
-labels: review
+name: "🎬 电影评价"
+description: "提交一条电影评价，会自动展示到网站"
+title: "[影评] "
+labels: ["review"]
 
 body:
   - type: input
     id: movie
     attributes:
-      label: 🎬 电影名称（必须和库中一致）
-      placeholder: 例如：Inception 或 盗梦空间
+      label: "🎬 电影名称"
+      description: "请输入完整电影名"
+      placeholder: "例如：盗梦空间 Inception"
     validations:
       required: true
 
   - type: input
     id: rating
     attributes:
-      label: ⭐ 你的评分（1-10）
-      placeholder: 8.5
+      label: "⭐ 评分（1-10）"
+      description: "填写评分数字"
+      placeholder: "例如：9"
+    validations:
+      required: true
 
   - type: textarea
     id: content
     attributes:
-      label: 💬 评价内容
-      placeholder: 写下你的真实观后感
+      label: "📝 评价内容"
+      description: "写下你的观后感"
+      placeholder: "例如：剧情非常烧脑，但结构严谨，非常值得二刷"
     validations:
       required: true
-
-  - type: input
-    id: author
-    attributes:
-      label: 👤 昵称
-      placeholder: 你的名字（可填 GitHub 名）
