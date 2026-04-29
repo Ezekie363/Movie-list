@@ -1,30 +1,39 @@
 import os
 import json
-import re
 
-REVIEW_DIR = "reviews"
+REVIEWS_DIR = "reviews"
 OUTPUT = "docs/reviews.json"
 
 reviews = []
 
-def extract(pattern, text, default=""):
-    match = re.search(pattern, text, re.MULTILINE)
-    return match.group(1).strip() if match else default
-
-for file in os.listdir(REVIEW_DIR):
+for file in os.listdir(REVIEWS_DIR):
     if not file.endswith(".md"):
         continue
 
-    path = os.path.join(REVIEW_DIR, file)
+    path = os.path.join(REVIEWS_DIR, file)
 
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    title = extract(r"# 🎬 (.+)", content)
-    review = extract(r"## 💭 观后感\n([\s\S]*)", content)
+    title = ""
+    rating = ""
+    review = ""
+
+    lines = content.split("\n")
+
+    for i, line in enumerate(lines):
+        if line.startswith("title:"):
+            title = line.replace("title:", "").strip()
+
+        elif line.startswith("rating:"):
+            rating = line.replace("rating:", "").strip()
+
+        elif line.startswith("review:"):
+            review = "\n".join(lines[i+1:]).strip()
 
     reviews.append({
         "title": title,
+        "rating": rating,
         "review": review
     })
 
@@ -33,4 +42,4 @@ os.makedirs("docs", exist_ok=True)
 with open(OUTPUT, "w", encoding="utf-8") as f:
     json.dump(reviews, f, ensure_ascii=False, indent=2)
 
-print(f"✅ Generated {len(reviews)} reviews")
+print("✅ reviews.json generated")
