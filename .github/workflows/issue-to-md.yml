@@ -24,12 +24,12 @@ jobs:
           echo "📌 原始 Issue 内容："
           echo "$body"
 
-          # ✅ 稳定解析（适配 GitHub Issue Form）
-          movie=$(echo "$body" | awk '/🎬 电影名称/{getline; print}')
-          rating=$(echo "$body" | awk '/⭐ 评分/{getline; print}')
-          content=$(echo "$body" | awk '/📝 评价内容/{flag=1; next} flag')
+          # ✅ 更宽松匹配（适配 ### 标题）
+          movie=$(echo "$body" | awk '/电影名称/{getline; print}')
+          rating=$(echo "$body" | awk '/评分/{getline; print}')
+          content=$(echo "$body" | awk '/评价内容/{flag=1; next} flag')
 
-          # ✅ 清理空行/空格
+          # ✅ 清理
           movie=$(echo "$movie" | xargs)
           rating=$(echo "$rating" | xargs)
           content=$(echo "$content" | sed '/^$/d')
@@ -44,14 +44,12 @@ jobs:
             exit 1
           fi
 
-          # ✅ 文件名安全（支持中文）
           safe_title=$(echo "$movie" | tr -d '[]:/\\?*"<>|' | tr ' ' '_')
 
           file="reviews/${safe_title}.md"
 
           echo "📄 Creating file: $file"
 
-          # ✅ 写入结构化数据
           echo "title: $movie" > "$file"
           echo "rating: $rating" >> "$file"
           echo "review: |" >> "$file"
