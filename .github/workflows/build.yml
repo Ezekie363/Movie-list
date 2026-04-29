@@ -30,7 +30,7 @@ jobs:
         run: python scripts/generate_json.py
 
       - name: 生成 reviews.json
-        run: python scripts/generate_reviews_json.py   # ✅ 注意这个名字
+        run: python scripts/generate_reviews.py   # ✅ 注意这个名字
 
       - name: 提交 JSON 文件
         run: |
