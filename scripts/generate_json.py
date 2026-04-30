@@ -47,7 +47,7 @@ for root, _, files in os.walk(DATA_DIR):
         # =========================
         # 评分（容错）
         # =========================
-        rating = extract(r"评分（?1-10）?[:：]?\s*([0-9.]+)", content, "0")
+        rating = extract(r"评分.*?[:：]\s*([0-9.]+)", content, "0")
         try:
             rating = float(rating)
         except:
