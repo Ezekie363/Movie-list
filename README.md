@@ -1,7 +1,7 @@
 # 🎬 Shared Movie List 共享电影表单
 
 ## 这是一个可以和朋友一起维护的电影影单仓库 🍿
-  作者：Ezekiel
+       🏆作者：Ezekiel
 
 ---
 
@@ -24,7 +24,7 @@
   <img width="1470" height="753" alt="image" src="https://github.com/user-attachments/assets/49c9bcdf-6908-47cb-a08c-7c2320acbffd" />
 
 ---  
-## 🎬 作者自用电影下载网址
+## 🔗 作者自用电影下载网址
   https://www.btsj6.com
 
 
