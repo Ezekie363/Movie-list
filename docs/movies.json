@@ -543,6 +543,21 @@
     "genre": "剧情 / 历史 / 战争"
   },
   {
+    "title": "奥本海默 Oppenheimer",
+    "year": 2023,
+    "category": "drama",
+    "rating": 8.9,
+    "tags": [
+      "传记",
+      "核武器",
+      "历史",
+      "诺兰"
+    ],
+    "director": "克里斯托弗·诺兰",
+    "actors": "基里安·墨菲 / 艾米莉·布朗特 / 马特·达蒙 / 小罗伯特·唐尼",
+    "genre": "剧情 / 传记 / 历史"
+  },
+  {
     "title": "秘密会议 Conclave",
     "year": 2024,
     "category": "drama",
