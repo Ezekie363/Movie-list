@@ -1,7 +1,8 @@
-# 🎬 Shared Movie List 共享电影表单
+**# 🎬 Shared Movie List 共享电影表单
+**
+🍿 这是一个可以和朋友一起维护的电影影单仓库
+> 作者：Ezekiel
 
-## 🍿 这是一个可以和朋友一起维护的电影影单仓库
-作者：Ezekiel
 
 ---
 
