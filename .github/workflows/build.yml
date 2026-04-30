@@ -1,17 +1,16 @@
 name: Generate Movie JSON
 
 on:
-  workflow_run:
-    workflows: ["issue-to-md"]
-    types:
-      - completed
+  push:
+    paths:
+      - "data/**"       # ✅ 关键：data变动就触发
+      - "reviews/**"    # （可选）影评变动也触发
 
 permissions:
   contents: write
 
 jobs:
   build:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -30,13 +29,13 @@ jobs:
         run: python scripts/generate_json.py
 
       - name: 生成 reviews.json
-        run: python scripts/generate_reviews.py   # ✅ 注意这个名字
+        run: python scripts/generate_reviews.py
 
-      - name: 提交 JSON 文件
+      - name: 提交 JSON
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add docs/movies.json docs/reviews.json
-          git commit -m "auto: update json files" || echo "No changes"
+          git commit -m "auto: update json" || echo "No changes"
           git push
