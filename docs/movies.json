@@ -263,6 +263,21 @@
     "genre": "剧情 / 动作 / 犯罪"
   },
   {
+    "title": "信条 Tenet",
+    "year": 2020,
+    "category": "sci-fi",
+    "rating": 8.3,
+    "tags": [
+      "时间逆转",
+      "烧脑",
+      "诺兰",
+      "科幻"
+    ],
+    "director": "克里斯托弗·诺兰",
+    "actors": "约翰·大卫·华盛顿 / 罗伯特·帕丁森 / 伊丽莎白·德比茨基",
+    "genre": "动作 / 科幻 / 悬疑"
+  },
+  {
     "title": "边境杀手 Sicario",
     "year": 2015,
     "category": "action",
