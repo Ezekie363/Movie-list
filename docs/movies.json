@@ -15,6 +15,19 @@
     "genre": "剧情 / 爱情"
   },
   {
+    "title": "明日的我与昨日的你约会 My Tomorrow, Your Yesterday",
+    "year": 2016,
+    "category": "romance",
+    "rating": 7.9,
+    "tags": [
+      "纯爱",
+      "宿命"
+    ],
+    "director": "三木孝浩",
+    "actors": "福士苍汰、小松菜奈",
+    "genre": "爱情 / 奇幻 / 剧情"
+  },
+  {
     "title": "机器人之梦 Robot Dreams",
     "year": 2023,
     "category": "animation",
@@ -34,7 +47,8 @@
     "rating": 6.8,
     "tags": [
       "赛博朋克",
-      "押井守动画经典"
+      "押井守",
+      "动画经典"
     ],
     "director": "押井守",
     "actors": "田中敦子、大塚明夫、山寺宏一（配音）",
@@ -72,6 +86,19 @@
     "genre": "动画 / 音乐 / 喜剧 / 治愈"
   },
   {
+    "title": "冒牌上尉 Der Hauptmann",
+    "year": 2017,
+    "category": "war",
+    "rating": 8.6,
+    "tags": [
+      "真实改编",
+      "二战"
+    ],
+    "director": "罗伯特·施文特克 Robert Schwentke",
+    "actors": "麦克斯·胡巴赫、米兰·佩舍尔、弗雷德里克·劳",
+    "genre": "剧情 / 历史 / 战争"
+  },
+  {
     "title": "低俗小说 Pulp Fiction",
     "year": 1994,
     "category": "comedy",
@@ -97,6 +124,18 @@
     "director": "马丁·斯科塞斯",
     "actors": "莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比",
     "genre": "剧情 / 传记 / 犯罪"
+  },
+  {
+    "title": "阅后即焚 Burn After Reading",
+    "year": 2008,
+    "category": "comedy",
+    "rating": 8.5,
+    "tags": [
+      "黑色幽默"
+    ],
+    "director": "乔尔·科恩、伊桑·科恩",
+    "actors": "乔治·克鲁尼、布拉德·皮特、弗兰西斯·麦克多蒙德、约翰·马尔科维奇",
+    "genre": "喜剧 / 犯罪 / 黑色幽默"
   },
   {
     "title": "白日梦想家 The Secret Life of Walter Mitty",
@@ -154,8 +193,8 @@
     "genre": "剧情 / 悬疑 / 惊悚"
   },
   {
-    "title": "2001太空漫游 2001: A Space Odyssey",
-    "year": 1968,
+    "title": "2001太空漫游",
+    "year": 2001,
     "category": "sci-fi",
     "rating": 8.9,
     "tags": [
@@ -168,8 +207,22 @@
     "genre": "科幻 / 惊悚 / 冒险"
   },
   {
-    "title": "Blade Runner 银翼杀手2049",
-    "year": 2017,
+    "title": "千钧一发 Gattaca",
+    "year": 1997,
+    "category": "sci-fi",
+    "rating": 9.0,
+    "tags": [
+      "基因歧视",
+      "未来社会",
+      "人性与梦想"
+    ],
+    "director": "安德鲁·尼科尔 Andrew Niccol",
+    "actors": "伊桑·霍克、乌玛·瑟曼、裘德·洛",
+    "genre": "科幻 / 剧情 / 惊悚"
+  },
+  {
+    "title": "Blade Runner 银翼杀手",
+    "year": 2049,
     "category": "sci-fi",
     "rating": 8.3,
     "tags": [
@@ -376,6 +429,18 @@
     "genre": "剧情 / 冒险"
   },
   {
+    "title": "新龙门客栈 New Dragon Gate Inn",
+    "year": 1992,
+    "category": "chinese",
+    "rating": 9.2,
+    "tags": [
+      "武侠"
+    ],
+    "director": "李惠民",
+    "actors": "张曼玉、梁家辉、甄子丹、林青霞",
+    "genre": "武侠 / 动作 / 古装"
+  },
+  {
     "title": "卧虎藏龙",
     "year": 2000,
     "category": "chinese",
@@ -401,6 +466,20 @@
     "director": "冯小刚",
     "actors": "黄轩 / 苗苗 / 钟楚曦",
     "genre": "剧情 / 历史 / 战争"
+  },
+  {
+    "title": "秘密会议 Conclave",
+    "year": 2024,
+    "category": "drama",
+    "rating": 7.5,
+    "tags": [
+      "教宗选举",
+      "权力阴谋",
+      "宗教与政治"
+    ],
+    "director": "爱德华·贝尔格 Edward Berger",
+    "actors": "拉尔夫·费因斯、斯坦利·图齐、约翰·利思戈、伊莎贝拉·罗塞里尼、赛尔乔·卡斯特利托",
+    "genre": "剧情 / 惊悚"
   },
   {
     "title": "美国往事 Once Upon a Time in America",
