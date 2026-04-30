@@ -222,7 +222,7 @@
   },
   {
     "title": "Blade Runner 银翼杀手",
-    "year": 2017,
+    "year": 2049,
     "category": "sci-fi",
     "rating": 8.3,
     "tags": [
@@ -439,6 +439,21 @@
     "director": "李惠民",
     "actors": "张曼玉、梁家辉、甄子丹、林青霞",
     "genre": "武侠 / 动作 / 古装"
+  },
+  {
+    "title": "毒舌律师 A Guilty Conscience",
+    "year": 2023,
+    "category": "chinese",
+    "rating": 8.6,
+    "tags": [
+      "法律",
+      "法庭辩论",
+      "香港电影",
+      "现实主义"
+    ],
+    "director": "吴炜伦",
+    "actors": "黄子华 / 谢君豪 / 王丹妮 / 廖子妤",
+    "genre": "剧情 / 法庭 / 犯罪"
   },
   {
     "title": "卧虎藏龙",
