@@ -123,6 +123,8 @@
       <option value="">默认排序</option>
       <option value="rating_desc">评分从高到低</option>
       <option value="rating_asc">评分从低到高</option>
+      <option value="year_desc">上映时间从新到旧</option>
+      <option value="year_asc">上映时间从旧到新</option>
     </select>
   </div>
 
@@ -186,9 +188,16 @@ window.onload = () => {
     });
 
     if (sortType === "rating_desc") {
-      filtered.sort((a, b) => b.rating - a.rating);
-    } else if (sortType === "rating_asc") {
-      filtered.sort((a, b) => a.rating - b.rating);
+    filtered.sort((a, b) => b.rating - a.rating);
+    } 
+    else if (sortType === "rating_asc") {
+    filtered.sort((a, b) => a.rating - b.rating);
+    } 
+    else if (sortType === "year_desc") {
+    filtered.sort((a, b) => (b.year || 0) - (a.year || 0));
+    } 
+    else if (sortType === "year_asc") {
+    filtered.sort((a, b) => (a.year || 0) - (b.year || 0));
     }
 
     list.innerHTML = "";
