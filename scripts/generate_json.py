@@ -26,7 +26,7 @@ for root, _, files in os.walk(DATA_DIR):
             continue
 
         # 标题（支持中英文）
-        title_match = re.search(r"# 🎬 (.+?) \((\d{4})\)", content)
+        title_match = re.search(r"#\s*🎬\s*(.+?)\s*\((\d{4})\)", content)
         if not title_match:
             continue
 
