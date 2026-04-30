@@ -36,7 +36,10 @@ for root, _, files in os.walk(DATA_DIR):
         title = "未知"
         year = 0
 
-        title_match = re.search(r"#\s*🎬\s*(.+?)\s*\(?(\d{4})\)?", content)
+        title_match = re.search(r"^#\s*🎬\s*(.*?)\s*\((\d{4})\)\s*$",
+        content,
+        re.MULTILINE
+        )
 
         if title_match:
             title = title_match.group(1).strip()
