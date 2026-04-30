@@ -482,6 +482,21 @@
     "genre": "剧情 / 惊悚"
   },
   {
+    "title": "死亡诗社 Dead Poets Society",
+    "year": 1989,
+    "category": "drama",
+    "rating": 9.0,
+    "tags": [
+      "成长",
+      "教育",
+      "自由思想",
+      "青春"
+    ],
+    "director": "彼得·威尔",
+    "actors": "罗宾·威廉姆斯 / 罗伯特·肖恩·莱纳德 / 伊桑·霍克",
+    "genre": "剧情 / 青春 / 教育"
+  },
+  {
     "title": "美国往事 Once Upon a Time in America",
     "year": 1984,
     "category": "drama",
