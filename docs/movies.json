@@ -695,5 +695,18 @@
     "director": "赛尔乔·莱昂内 Sergio Leone",
     "actors": "罗伯特·德尼罗、詹姆斯·伍兹、伊丽莎白·麦戈文",
     "genre": "犯罪 / 剧情 / 黑帮"
+  },
+  {
+    "title": "决战犹马镇 3:10 to Yuma",
+    "year": 2007,
+    "category": "drama",
+    "rating": 8.8,
+    "tags": [
+      "西部",
+      "正义与人性"
+    ],
+    "director": "詹姆斯·曼高德 James Mangold",
+    "actors": "克里斯蒂安·贝尔、罗素·克劳",
+    "genre": "西部 / 动作 / 剧情"
   }
 ]
