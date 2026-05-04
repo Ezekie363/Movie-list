@@ -28,6 +28,19 @@
     "genre": "爱情 / 奇幻 / 剧情"
   },
   {
+    "title": "情书 Love Letter",
+    "year": 1995,
+    "category": "romance",
+    "rating": 9.0,
+    "tags": [
+      "纯爱",
+      "思念"
+    ],
+    "director": "岩井俊二",
+    "actors": "中山美穗、丰川悦司、酒井美纪",
+    "genre": "爱情 / 剧情"
+  },
+  {
     "title": "机器人之梦 Robot Dreams",
     "year": 2023,
     "category": "animation",
