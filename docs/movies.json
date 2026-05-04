@@ -708,5 +708,19 @@
     "director": "詹姆斯·曼高德 James Mangold",
     "actors": "克里斯蒂安·贝尔、罗素·克劳",
     "genre": "西部 / 动作 / 剧情"
+  },
+  {
+    "title": "大地惊雷 True Grit",
+    "year": 2010,
+    "category": "drama",
+    "rating": 8.1,
+    "tags": [
+      "西部",
+      "复仇",
+      "勇气"
+    ],
+    "director": "科恩兄弟（乔尔·科恩、伊桑·科恩）",
+    "actors": "海莉·斯坦菲尔德、杰夫·布里吉斯、马特·达蒙、乔什·布洛林",
+    "genre": "西部 / 剧情 / 动作"
   }
 ]
