@@ -335,6 +335,19 @@
     "genre": "剧情 / 传记 / 犯罪"
   },
   {
+    "title": "空中监狱 Con Air",
+    "year": 1997,
+    "category": "action",
+    "rating": 8.7,
+    "tags": [
+      "动作",
+      "越狱"
+    ],
+    "director": "西蒙·韦斯特 Simon West",
+    "actors": "尼古拉斯·凯奇、约翰·马尔科维奇、约翰·库萨克",
+    "genre": "动作 / 犯罪 / 惊悚"
+  },
+  {
     "title": "搏击俱乐部 Fight Club",
     "year": 1999,
     "category": "action",
