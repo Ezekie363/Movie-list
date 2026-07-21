@@ -1,56 +1,191 @@
 [
   {
-    "title": "怦然心动 Flipped",
-    "year": 2010,
-    "category": "romance",
+    "title": "佛罗里达乐园 The Florida Project",
+    "year": 2017,
+    "category": "family",
     "rating": 8.5,
     "tags": [
-      "爱情",
-      "青春",
-      "治愈",
-      "成长"
+      "现实主义",
+      "儿童视角",
+      "社会",
+      "治愈"
     ],
-    "director": "罗伯·莱纳",
-    "actors": "玛德琳·卡罗尔 / 卡兰·麦克奥利菲",
-    "genre": "剧情 / 爱情"
+    "director": "肖恩·贝克",
+    "actors": "布鲁克琳·普林斯 / 威廉·达福",
+    "genre": "剧情"
   },
   {
-    "title": "明日的我与昨日的你约会 My Tomorrow, Your Yesterday",
+    "title": "海边的曼彻斯特 Manchester by the Sea",
     "year": 2016,
-    "category": "romance",
-    "rating": 7.9,
+    "category": "family",
+    "rating": 8.6,
     "tags": [
-      "纯爱",
-      "宿命"
+      "be"
     ],
-    "director": "三木孝浩",
-    "actors": "福士苍汰、小松菜奈",
-    "genre": "爱情 / 奇幻 / 剧情"
+    "director": "肯尼思·洛纳根",
+    "actors": "卡西·阿弗莱克 / 卢卡斯·赫奇斯",
+    "genre": "剧情 / 家庭"
   },
   {
-    "title": "爱乐之城 La La Land",
+    "title": "在西伯利亚森林中 Dans les forêts de Sibérie",
     "year": 2016,
-    "category": "romance",
-    "rating": 9.2,
+    "category": "family",
+    "rating": 8.6,
     "tags": [
-      "梦想与爱情"
+      "独居",
+      "探险"
     ],
-    "director": "达米恩·查泽雷 Damien Chazelle",
-    "actors": "瑞恩·高斯林、艾玛·斯通",
-    "genre": "爱情 / 音乐 / 剧情"
+    "director": "萨菲·奈布",
+    "actors": "拉斐尔·佩尔索纳 / 叶甫根尼·希迪金",
+    "genre": "剧情 / 冒险"
   },
   {
-    "title": "情书 Love Letter",
-    "year": 1995,
-    "category": "romance",
-    "rating": 9.0,
+    "title": "当幸福来敲门 The Pursuit of Happyness",
+    "year": 2016,
+    "category": "family",
+    "rating": 9.1,
     "tags": [
-      "纯爱",
-      "思念"
+      "励志"
     ],
-    "director": "岩井俊二",
-    "actors": "中山美穗、丰川悦司、酒井美纪",
-    "genre": "爱情 / 剧情"
+    "director": "加布里埃莱·穆奇诺",
+    "actors": "威尔·史密斯 / 贾登·史密斯 / 坦迪·牛顿",
+    "genre": "剧情 / 家庭 / 传记"
+  },
+  {
+    "title": "火车梦 Train Dreams",
+    "year": 2025,
+    "category": "family",
+    "rating": 8.3,
+    "tags": [
+      "普通伐木工的一生"
+    ],
+    "director": "克林特·本特利",
+    "actors": "乔尔·埃哲顿 / 菲丽希缇·琼斯",
+    "genre": "剧情"
+  },
+  {
+    "title": "华尔街之狼 The Wolf of Wall Street",
+    "year": 2013,
+    "category": "comedy",
+    "rating": 8.1,
+    "tags": [
+      "金融",
+      "犯罪",
+      "18+"
+    ],
+    "director": "马丁·斯科塞斯",
+    "actors": "莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比",
+    "genre": "剧情 / 传记 / 犯罪"
+  },
+  {
+    "title": "白日梦想家 The Secret Life of Walter Mitty",
+    "year": 2013,
+    "category": "comedy",
+    "rating": 8.6,
+    "tags": [
+      "励志",
+      "剧情",
+      "冒险"
+    ],
+    "director": "本·斯蒂勒",
+    "actors": "本·斯蒂勒 / 克里斯汀·韦格 / 亚当·斯科特",
+    "genre": "喜剧"
+  },
+  {
+    "title": "低俗小说 Pulp Fiction",
+    "year": 1994,
+    "category": "comedy",
+    "rating": 8.9,
+    "tags": [
+      "低俗",
+      "暴力美学"
+    ],
+    "director": "昆汀·塔伦蒂诺",
+    "actors": "约翰·特拉沃尔塔 / 乌玛·瑟曼 / 阿曼达·普拉莫",
+    "genre": "剧情 / 喜剧 / 犯罪"
+  },
+  {
+    "title": "阅后即焚 Burn After Reading",
+    "year": 2008,
+    "category": "comedy",
+    "rating": 8.5,
+    "tags": [
+      "黑色幽默"
+    ],
+    "director": "乔尔·科恩、伊桑·科恩",
+    "actors": "乔治·克鲁尼、布拉德·皮特、弗兰西斯·麦克多蒙德、约翰·马尔科维奇",
+    "genre": "喜剧 / 犯罪 / 黑色幽默"
+  },
+  {
+    "title": "徒手攀岩 Free solo",
+    "year": 2019,
+    "category": "documentary",
+    "rating": 8.8,
+    "tags": [
+      "记录",
+      "攀岩",
+      "极限运动"
+    ],
+    "director": "伊丽莎白·柴·瓦沙瑞莉 / 金国威",
+    "actors": "亚历克斯·霍诺德",
+    "genre": "纪录片"
+  },
+  {
+    "title": "加沙 Gaza",
+    "year": 2019,
+    "category": "documentary",
+    "rating": 8.0,
+    "tags": [
+      "战争记录",
+      "战火"
+    ],
+    "director": "格瑞·基恩 / 安德鲁·麦康奈尔",
+    "actors": "无",
+    "genre": "纪录片"
+  },
+  {
+    "title": "寻梦环游记 Coco",
+    "year": 2017,
+    "category": "animation",
+    "rating": 9.3,
+    "tags": [
+      "亲情",
+      "音乐"
+    ],
+    "director": "李·昂克里奇 Lee Unkrich",
+    "actors": "安东尼·冈萨雷斯、盖尔·加西亚·贝纳尔、本杰明·布拉特",
+    "genre": "动画 / 音乐 / 家庭 / 奇幻"
+  },
+  {
+    "title": "孤独摇滚！剧场版",
+    "year": 2024,
+    "category": "animation",
+    "rating": 9.3,
+    "tags": [
+      "孤独摇滚",
+      "芳文社",
+      "音乐番",
+      "社恐治愈",
+      "动画剧场版"
+    ],
+    "director": "斋藤圭一郎",
+    "actors": "青山吉能（后藤独 配音）、铃代纱弓（山田凉 配音）、水野朔（伊地知虹夏 配音）、长谷川育美（喜多郁代 配音）",
+    "genre": "动画 / 音乐 / 喜剧 / 治愈"
+  },
+  {
+    "title": "蜘蛛侠：纵横宇宙 Spider-Man: Across the Spider-Verse",
+    "year": 2023,
+    "category": "animation",
+    "rating": 9.1,
+    "tags": [
+      "动画",
+      "多元宇宙",
+      "视觉震撼",
+      "超级英雄"
+    ],
+    "director": "乔伊姆·多斯·桑托斯 / 凯普·鲍尔斯 / 贾斯汀·K·汤普森",
+    "actors": "沙梅克·摩尔 / 海莉·斯坦菲尔德 / 奥斯卡·伊萨克",
+    "genre": "动画 / 动作 / 科幻"
   },
   {
     "title": "机器人之梦 Robot Dreams",
@@ -80,171 +215,204 @@
     "genre": "科幻 / 动画 / 赛博朋克 / 悬疑"
   },
   {
-    "title": "寻梦环游记 Coco",
-    "year": 2017,
-    "category": "animation",
-    "rating": 9.3,
-    "tags": [
-      "亲情",
-      "音乐"
-    ],
-    "director": "李·昂克里奇 Lee Unkrich",
-    "actors": "安东尼·冈萨雷斯、盖尔·加西亚·贝纳尔、本杰明·布拉特",
-    "genre": "动画 / 音乐 / 家庭 / 奇幻"
-  },
-  {
-    "title": "蜘蛛侠：纵横宇宙 Spider-Man: Across the Spider-Verse",
-    "year": 2023,
-    "category": "animation",
+    "title": "猫鼠游戏 Catch Me If You Can",
+    "year": 2002,
+    "category": "action",
     "rating": 9.1,
     "tags": [
-      "动画",
-      "多元宇宙",
-      "视觉震撼",
-      "超级英雄"
+      "犯罪动作",
+      "悬疑"
     ],
-    "director": "乔伊姆·多斯·桑托斯 / 凯普·鲍尔斯 / 贾斯汀·K·汤普森",
-    "actors": "沙梅克·摩尔 / 海莉·斯坦菲尔德 / 奥斯卡·伊萨克",
-    "genre": "动画 / 动作 / 科幻"
-  },
-  {
-    "title": "孤独摇滚！剧场版",
-    "year": 2024,
-    "category": "animation",
-    "rating": 9.3,
-    "tags": [
-      "孤独摇滚",
-      "芳文社",
-      "音乐番",
-      "社恐治愈",
-      "动画剧场版"
-    ],
-    "director": "斋藤圭一郎",
-    "actors": "青山吉能（后藤独 配音）、铃代纱弓（山田凉 配音）、水野朔（伊地知虹夏 配音）、长谷川育美（喜多郁代 配音）",
-    "genre": "动画 / 音乐 / 喜剧 / 治愈"
-  },
-  {
-    "title": "西线无战事 All Quiet on the Western Front",
-    "year": 2022,
-    "category": "war",
-    "rating": 8.7,
-    "tags": [
-      "战争反思",
-      "一战",
-      "残酷现实",
-      "反战"
-    ],
-    "director": "爱德华·贝尔格",
-    "actors": "费利克斯·卡默雷尔 / 阿尔布雷希特·舒赫",
-    "genre": "战争 / 剧情"
-  },
-  {
-    "title": "1917",
-    "year": 2019,
-    "category": "war",
-    "rating": 8.8,
-    "tags": [
-      "一镜到底",
-      "战争",
-      "沉浸式",
-      "一战"
-    ],
-    "director": "萨姆·门德斯",
-    "actors": "乔治·麦凯 / 迪恩-查尔斯·查普曼",
-    "genre": "战争 / 剧情"
-  },
-  {
-    "title": "冒牌上尉 Der Hauptmann",
-    "year": 2017,
-    "category": "war",
-    "rating": 8.6,
-    "tags": [
-      "真实改编",
-      "二战"
-    ],
-    "director": "罗伯特·施文特克 Robert Schwentke",
-    "actors": "麦克斯·胡巴赫、米兰·佩舍尔、弗雷德里克·劳",
-    "genre": "剧情 / 历史 / 战争"
-  },
-  {
-    "title": "低俗小说 Pulp Fiction",
-    "year": 1994,
-    "category": "comedy",
-    "rating": 8.9,
-    "tags": [
-      "低俗",
-      "暴力美学"
-    ],
-    "director": "昆汀·塔伦蒂诺",
-    "actors": "约翰·特拉沃尔塔 / 乌玛·瑟曼 / 阿曼达·普拉莫",
-    "genre": "剧情 / 喜剧 / 犯罪"
-  },
-  {
-    "title": "华尔街之狼 The Wolf of Wall Street",
-    "year": 2013,
-    "category": "comedy",
-    "rating": 8.1,
-    "tags": [
-      "金融",
-      "犯罪",
-      "18+"
-    ],
-    "director": "马丁·斯科塞斯",
-    "actors": "莱昂纳多·迪卡普里奥 / 乔纳·希尔 / 玛格特·罗比",
+    "director": "史蒂文·斯皮尔伯格",
+    "actors": "莱昂纳多·迪卡普里奥 / 汤姆·汉克斯",
     "genre": "剧情 / 传记 / 犯罪"
   },
   {
-    "title": "阅后即焚 Burn After Reading",
-    "year": 2008,
-    "category": "comedy",
-    "rating": 8.5,
-    "tags": [
-      "黑色幽默"
-    ],
-    "director": "乔尔·科恩、伊桑·科恩",
-    "actors": "乔治·克鲁尼、布拉德·皮特、弗兰西斯·麦克多蒙德、约翰·马尔科维奇",
-    "genre": "喜剧 / 犯罪 / 黑色幽默"
-  },
-  {
-    "title": "白日梦想家 The Secret Life of Walter Mitty",
-    "year": 2013,
-    "category": "comedy",
-    "rating": 8.6,
-    "tags": [
-      "励志",
-      "剧情",
-      "冒险"
-    ],
-    "director": "本·斯蒂勒",
-    "actors": "本·斯蒂勒 / 克里斯汀·韦格 / 亚当·斯科特",
-    "genre": "喜剧"
-  },
-  {
-    "title": "加沙 Gaza",
-    "year": 2019,
-    "category": "documentary",
+    "title": "美国精神病人 American Psycho",
+    "year": 2000,
+    "category": "action",
     "rating": 8.0,
     "tags": [
-      "战争记录",
-      "战火"
+      "心理",
+      "黑色幽默",
+      "人性",
+      "讽刺"
     ],
-    "director": "格瑞·基恩 / 安德鲁·麦康奈尔",
-    "actors": "无",
-    "genre": "纪录片"
+    "director": "玛丽·哈伦",
+    "actors": "克里斯蒂安·贝尔",
+    "genre": "剧情 / 犯罪 / 惊悚"
   },
   {
-    "title": "徒手攀岩 Free solo",
-    "year": 2019,
-    "category": "documentary",
+    "title": "边境杀手 Sicario",
+    "year": 2015,
+    "category": "action",
+    "rating": 7.8,
+    "tags": [
+      "剧情",
+      "惊悚",
+      "犯罪"
+    ],
+    "director": "丹尼斯·维伦纽瓦",
+    "actors": "艾米莉·布朗特 / 本尼西奥·德尔·托罗 / 乔什·布洛林",
+    "genre": "动作/犯罪/毒品/边境"
+  },
+  {
+    "title": "洛城机密 L.A. Confidential",
+    "year": 1997,
+    "category": "action",
+    "rating": 8.7,
+    "tags": [
+      "犯罪",
+      "悬疑",
+      "黑色电影",
+      "经典"
+    ],
+    "director": "柯蒂斯·汉森",
+    "actors": "罗素·克劳 / 盖·皮尔斯 / 凯文·史派西",
+    "genre": "剧情 / 犯罪 / 悬疑"
+  },
+  {
+    "title": "空中监狱 Con Air",
+    "year": 1997,
+    "category": "action",
+    "rating": 8.7,
+    "tags": [
+      "动作",
+      "越狱"
+    ],
+    "director": "西蒙·韦斯特 Simon West",
+    "actors": "尼古拉斯·凯奇、约翰·马尔科维奇、约翰·库萨克",
+    "genre": "动作 / 犯罪 / 惊悚"
+  },
+  {
+    "title": "GT赛车：极速狂飙 Gran Turismo",
+    "year": 2023,
+    "category": "action",
+    "rating": 7.5,
+    "tags": [
+      "赛车",
+      "真实改编",
+      "热血",
+      "游戏改编"
+    ],
+    "director": "尼尔·布洛姆坎普",
+    "actors": "阿奇·马德奎 / 大卫·哈伯 / 奥兰多·布鲁姆",
+    "genre": "剧情 / 动作 / 运动"
+  },
+  {
+    "title": "杀人回忆 Memories of Murder",
+    "year": 2003,
+    "category": "action",
+    "rating": 9.0,
+    "tags": [
+      "犯罪",
+      "真实事件",
+      "压抑",
+      "经典"
+    ],
+    "director": "奉俊昊",
+    "actors": "宋康昊 / 金相庆",
+    "genre": "剧情 / 犯罪 / 惊悚"
+  },
+  {
+    "title": "搏击俱乐部 Fight Club",
+    "year": 1999,
+    "category": "action",
+    "rating": 9.0,
+    "tags": [
+      "反转",
+      "人性",
+      "哲学",
+      "经典"
+    ],
+    "director": "大卫·芬奇",
+    "actors": "布拉德·皮特 / 爱德华·诺顿",
+    "genre": "剧情"
+  },
+  {
+    "title": "死亡诗社 Dead Poets Society",
+    "year": 1989,
+    "category": "drama",
+    "rating": 9.0,
+    "tags": [
+      "成长",
+      "教育",
+      "自由思想",
+      "青春"
+    ],
+    "director": "彼得·威尔",
+    "actors": "罗宾·威廉姆斯 / 罗伯特·肖恩·莱纳德 / 伊桑·霍克",
+    "genre": "剧情 / 青春 / 教育"
+  },
+  {
+    "title": "秘密会议 Conclave",
+    "year": 2024,
+    "category": "drama",
+    "rating": 7.5,
+    "tags": [
+      "教宗选举",
+      "权力阴谋",
+      "宗教与政治"
+    ],
+    "director": "爱德华·贝尔格 Edward Berger",
+    "actors": "拉尔夫·费因斯、斯坦利·图齐、约翰·利思戈、伊莎贝拉·罗塞里尼、赛尔乔·卡斯特利托",
+    "genre": "剧情 / 惊悚"
+  },
+  {
+    "title": "美国往事 Once Upon a Time in America",
+    "year": 1984,
+    "category": "drama",
+    "rating": 9.7,
+    "tags": [
+      "黑帮史诗",
+      "宿命",
+      "记忆与幻觉"
+    ],
+    "director": "赛尔乔·莱昂内 Sergio Leone",
+    "actors": "罗伯特·德尼罗、詹姆斯·伍兹、伊丽莎白·麦戈文",
+    "genre": "犯罪 / 剧情 / 黑帮"
+  },
+  {
+    "title": "大地惊雷 True Grit",
+    "year": 2010,
+    "category": "drama",
+    "rating": 8.1,
+    "tags": [
+      "西部",
+      "复仇",
+      "勇气"
+    ],
+    "director": "科恩兄弟（乔尔·科恩、伊桑·科恩）",
+    "actors": "海莉·斯坦菲尔德、杰夫·布里吉斯、马特·达蒙、乔什·布洛林",
+    "genre": "西部 / 剧情 / 动作"
+  },
+  {
+    "title": "奥本海默 Oppenheimer",
+    "year": 2023,
+    "category": "drama",
+    "rating": 8.9,
+    "tags": [
+      "传记",
+      "核武器",
+      "历史",
+      "诺兰"
+    ],
+    "director": "克里斯托弗·诺兰",
+    "actors": "基里安·墨菲 / 艾米莉·布朗特 / 马特·达蒙 / 小罗伯特·唐尼",
+    "genre": "剧情 / 传记 / 历史"
+  },
+  {
+    "title": "决战犹马镇 3:10 to Yuma",
+    "year": 2007,
+    "category": "drama",
     "rating": 8.8,
     "tags": [
-      "记录",
-      "攀岩",
-      "极限运动"
+      "西部",
+      "正义与人性"
     ],
-    "director": "伊丽莎白·柴·瓦沙瑞莉 / 金国威",
-    "actors": "亚历克斯·霍诺德",
-    "genre": "纪录片"
+    "director": "詹姆斯·曼高德 James Mangold",
+    "actors": "克里斯蒂安·贝尔、罗素·克劳",
+    "genre": "西部 / 动作 / 剧情"
   },
   {
     "title": "致命魔术 The Prestige",
@@ -261,20 +429,6 @@
     "genre": "剧情 / 悬疑 / 惊悚"
   },
   {
-    "title": "2001太空漫游 2001: A Space Odyssey",
-    "year": 1968,
-    "category": "sci-fi",
-    "rating": 8.9,
-    "tags": [
-      "科幻",
-      "剧情",
-      "哲学"
-    ],
-    "director": "斯坦利·库布里克",
-    "actors": "凯尔·杜拉 / 加里·洛克伍德 / 威廉姆·西尔维斯特",
-    "genre": "科幻 / 惊悚 / 冒险"
-  },
-  {
     "title": "千钧一发 Gattaca",
     "year": 1997,
     "category": "sci-fi",
@@ -287,33 +441,6 @@
     "director": "安德鲁·尼科尔 Andrew Niccol",
     "actors": "伊桑·霍克、乌玛·瑟曼、裘德·洛",
     "genre": "科幻 / 剧情 / 惊悚"
-  },
-  {
-    "title": "银翼杀手2049 Blade Runner 2049",
-    "year": 2017,
-    "category": "sci-fi",
-    "rating": 8.3,
-    "tags": [
-      "科幻",
-      "赛博朋克",
-      "仿生人"
-    ],
-    "director": "丹尼斯·维伦纽瓦",
-    "actors": "瑞恩·高斯林 / 哈里森·福特 / 安娜·德·阿玛斯",
-    "genre": "科幻"
-  },
-  {
-    "title": "盗梦空间 Inception",
-    "year": 2010,
-    "category": "sci-fi",
-    "rating": 9.0,
-    "tags": [
-      "烧脑",
-      "梦境"
-    ],
-    "director": "Christopher Nolan",
-    "actors": "Leonardo DiCaprio",
-    "genre": "Sci-Fi"
   },
   {
     "title": "蝙蝠侠：黑暗骑士 The Dark Knight",
@@ -346,225 +473,141 @@
     "genre": "动作 / 科幻 / 悬疑"
   },
   {
-    "title": "边境杀手 Sicario",
-    "year": 2015,
-    "category": "action",
-    "rating": 7.8,
-    "tags": [
-      "剧情",
-      "惊悚",
-      "犯罪"
-    ],
-    "director": "丹尼斯·维伦纽瓦",
-    "actors": "艾米莉·布朗特 / 本尼西奥·德尔·托罗 / 乔什·布洛林",
-    "genre": "动作/犯罪/毒品/边境"
-  },
-  {
-    "title": "猫鼠游戏 Catch Me If You Can",
-    "year": 2002,
-    "category": "action",
-    "rating": 9.1,
-    "tags": [
-      "犯罪动作",
-      "悬疑"
-    ],
-    "director": "史蒂文·斯皮尔伯格",
-    "actors": "莱昂纳多·迪卡普里奥 / 汤姆·汉克斯",
-    "genre": "剧情 / 传记 / 犯罪"
-  },
-  {
-    "title": "空中监狱 Con Air",
-    "year": 1997,
-    "category": "action",
-    "rating": 8.7,
-    "tags": [
-      "动作",
-      "越狱"
-    ],
-    "director": "西蒙·韦斯特 Simon West",
-    "actors": "尼古拉斯·凯奇、约翰·马尔科维奇、约翰·库萨克",
-    "genre": "动作 / 犯罪 / 惊悚"
-  },
-  {
-    "title": "搏击俱乐部 Fight Club",
-    "year": 1999,
-    "category": "action",
-    "rating": 9.0,
-    "tags": [
-      "反转",
-      "人性",
-      "哲学",
-      "经典"
-    ],
-    "director": "大卫·芬奇",
-    "actors": "布拉德·皮特 / 爱德华·诺顿",
-    "genre": "剧情"
-  },
-  {
-    "title": "杀人回忆 Memories of Murder",
-    "year": 2003,
-    "category": "action",
-    "rating": 9.0,
-    "tags": [
-      "犯罪",
-      "真实事件",
-      "压抑",
-      "经典"
-    ],
-    "director": "奉俊昊",
-    "actors": "宋康昊 / 金相庆",
-    "genre": "剧情 / 犯罪 / 惊悚"
-  },
-  {
-    "title": "洛城机密 L.A. Confidential",
-    "year": 1997,
-    "category": "action",
-    "rating": 8.7,
-    "tags": [
-      "犯罪",
-      "悬疑",
-      "黑色电影",
-      "经典"
-    ],
-    "director": "柯蒂斯·汉森",
-    "actors": "罗素·克劳 / 盖·皮尔斯 / 凯文·史派西",
-    "genre": "剧情 / 犯罪 / 悬疑"
-  },
-  {
-    "title": "GT赛车：极速狂飙 Gran Turismo",
-    "year": 2023,
-    "category": "action",
-    "rating": 7.5,
-    "tags": [
-      "赛车",
-      "真实改编",
-      "热血",
-      "游戏改编"
-    ],
-    "director": "尼尔·布洛姆坎普",
-    "actors": "阿奇·马德奎 / 大卫·哈伯 / 奥兰多·布鲁姆",
-    "genre": "剧情 / 动作 / 运动"
-  },
-  {
-    "title": "美国精神病人 American Psycho",
-    "year": 2000,
-    "category": "action",
-    "rating": 8.0,
-    "tags": [
-      "心理",
-      "黑色幽默",
-      "人性",
-      "讽刺"
-    ],
-    "director": "玛丽·哈伦",
-    "actors": "克里斯蒂安·贝尔",
-    "genre": "剧情 / 犯罪 / 惊悚"
-  },
-  {
-    "title": "火车梦 Train Dreams",
-    "year": 2025,
-    "category": "family",
+    "title": "银翼杀手2049 Blade Runner 2049",
+    "year": 2017,
+    "category": "sci-fi",
     "rating": 8.3,
     "tags": [
-      "普通伐木工的一生"
+      "科幻",
+      "赛博朋克",
+      "仿生人"
     ],
-    "director": "克林特·本特利",
-    "actors": "乔尔·埃哲顿 / 菲丽希缇·琼斯",
-    "genre": "剧情"
+    "director": "丹尼斯·维伦纽瓦",
+    "actors": "瑞恩·高斯林 / 哈里森·福特 / 安娜·德·阿玛斯",
+    "genre": "科幻"
   },
   {
-    "title": "海边的曼彻斯特 Manchester by the Sea",
+    "title": "盗梦空间 Inception",
+    "year": 2010,
+    "category": "sci-fi",
+    "rating": 9.0,
+    "tags": [
+      "烧脑",
+      "梦境"
+    ],
+    "director": "Christopher Nolan",
+    "actors": "Leonardo DiCaprio",
+    "genre": "Sci-Fi"
+  },
+  {
+    "title": "2001太空漫游 2001: A Space Odyssey",
+    "year": 1968,
+    "category": "sci-fi",
+    "rating": 8.9,
+    "tags": [
+      "科幻",
+      "剧情",
+      "哲学"
+    ],
+    "director": "斯坦利·库布里克",
+    "actors": "凯尔·杜拉 / 加里·洛克伍德 / 威廉姆·西尔维斯特",
+    "genre": "科幻 / 惊悚 / 冒险"
+  },
+  {
+    "title": "爱乐之城 La La Land",
     "year": 2016,
-    "category": "family",
-    "rating": 8.6,
-    "tags": [
-      "be"
-    ],
-    "director": "肯尼思·洛纳根",
-    "actors": "卡西·阿弗莱克 / 卢卡斯·赫奇斯",
-    "genre": "剧情 / 家庭"
-  },
-  {
-    "title": "当幸福来敲门 The Pursuit of Happyness",
-    "year": 2016,
-    "category": "family",
-    "rating": 9.1,
-    "tags": [
-      "励志"
-    ],
-    "director": "加布里埃莱·穆奇诺",
-    "actors": "威尔·史密斯 / 贾登·史密斯 / 坦迪·牛顿",
-    "genre": "剧情 / 家庭 / 传记"
-  },
-  {
-    "title": "佛罗里达乐园 The Florida Project",
-    "year": 2017,
-    "category": "family",
-    "rating": 8.5,
-    "tags": [
-      "现实主义",
-      "儿童视角",
-      "社会",
-      "治愈"
-    ],
-    "director": "肖恩·贝克",
-    "actors": "布鲁克琳·普林斯 / 威廉·达福",
-    "genre": "剧情"
-  },
-  {
-    "title": "在西伯利亚森林中 Dans les forêts de Sibérie",
-    "year": 2016,
-    "category": "family",
-    "rating": 8.6,
-    "tags": [
-      "独居",
-      "探险"
-    ],
-    "director": "萨菲·奈布",
-    "actors": "拉斐尔·佩尔索纳 / 叶甫根尼·希迪金",
-    "genre": "剧情 / 冒险"
-  },
-  {
-    "title": "新龙门客栈 New Dragon Gate Inn",
-    "year": 1992,
-    "category": "chinese",
+    "category": "romance",
     "rating": 9.2,
     "tags": [
-      "武侠"
+      "梦想与爱情"
     ],
-    "director": "李惠民",
-    "actors": "张曼玉、梁家辉、甄子丹、林青霞",
-    "genre": "武侠 / 动作 / 古装"
+    "director": "达米恩·查泽雷 Damien Chazelle",
+    "actors": "瑞恩·高斯林、艾玛·斯通",
+    "genre": "爱情 / 音乐 / 剧情"
   },
   {
-    "title": "毒舌律师 A Guilty Conscience",
-    "year": 2023,
-    "category": "chinese",
-    "rating": 8.6,
+    "title": "明日的我与昨日的你约会 My Tomorrow, Your Yesterday",
+    "year": 2016,
+    "category": "romance",
+    "rating": 7.9,
     "tags": [
-      "法律",
-      "法庭辩论",
-      "香港电影",
-      "现实主义"
+      "纯爱",
+      "宿命"
     ],
-    "director": "吴炜伦",
-    "actors": "黄子华 / 谢君豪 / 王丹妮 / 廖子妤",
-    "genre": "剧情 / 法庭 / 犯罪"
+    "director": "三木孝浩",
+    "actors": "福士苍汰、小松菜奈",
+    "genre": "爱情 / 奇幻 / 剧情"
   },
   {
-    "title": "花样年华 In the Mood for Love",
-    "year": 2000,
-    "category": "chinese",
-    "rating": 9.3,
+    "title": "情书 Love Letter",
+    "year": 1995,
+    "category": "romance",
+    "rating": 9.0,
+    "tags": [
+      "纯爱",
+      "思念"
+    ],
+    "director": "岩井俊二",
+    "actors": "中山美穗、丰川悦司、酒井美纪",
+    "genre": "爱情 / 剧情"
+  },
+  {
+    "title": "怦然心动 Flipped",
+    "year": 2010,
+    "category": "romance",
+    "rating": 8.5,
     "tags": [
       "爱情",
-      "王家卫",
-      "东方美学",
-      "克制"
+      "青春",
+      "治愈",
+      "成长"
     ],
-    "director": "王家卫",
-    "actors": "梁朝伟 / 张曼玉",
+    "director": "罗伯·莱纳",
+    "actors": "玛德琳·卡罗尔 / 卡兰·麦克奥利菲",
     "genre": "剧情 / 爱情"
+  },
+  {
+    "title": "西线无战事 All Quiet on the Western Front",
+    "year": 2022,
+    "category": "war",
+    "rating": 8.7,
+    "tags": [
+      "战争反思",
+      "一战",
+      "残酷现实",
+      "反战"
+    ],
+    "director": "爱德华·贝尔格",
+    "actors": "费利克斯·卡默雷尔 / 阿尔布雷希特·舒赫",
+    "genre": "战争 / 剧情"
+  },
+  {
+    "title": "冒牌上尉 Der Hauptmann",
+    "year": 2017,
+    "category": "war",
+    "rating": 8.6,
+    "tags": [
+      "真实改编",
+      "二战"
+    ],
+    "director": "罗伯特·施文特克 Robert Schwentke",
+    "actors": "麦克斯·胡巴赫、米兰·佩舍尔、弗雷德里克·劳",
+    "genre": "剧情 / 历史 / 战争"
+  },
+  {
+    "title": "1917",
+    "year": 2019,
+    "category": "war",
+    "rating": 8.8,
+    "tags": [
+      "一镜到底",
+      "战争",
+      "沉浸式",
+      "一战"
+    ],
+    "director": "萨姆·门德斯",
+    "actors": "乔治·麦凯 / 迪恩-查尔斯·查普曼",
+    "genre": "战争 / 剧情"
   },
   {
     "title": "寒战 Cold War",
@@ -582,19 +625,19 @@
     "genre": "剧情 / 犯罪 / 警匪"
   },
   {
-    "title": "卧虎藏龙",
-    "year": 2000,
+    "title": "毒舌律师 A Guilty Conscience",
+    "year": 2023,
     "category": "chinese",
-    "rating": 9.0,
+    "rating": 8.6,
     "tags": [
-      "武侠",
-      "东方美学",
-      "爱情",
-      "经典"
+      "法律",
+      "法庭辩论",
+      "香港电影",
+      "现实主义"
     ],
-    "director": "李安",
-    "actors": "周润发 / 杨紫琼 / 章子怡 / 张震",
-    "genre": "剧情 / 动作 / 爱情"
+    "director": "吴炜伦",
+    "actors": "黄子华 / 谢君豪 / 王丹妮 / 廖子妤",
+    "genre": "剧情 / 法庭 / 犯罪"
   },
   {
     "title": "英雄本色 A Better Tomorrow",
@@ -612,6 +655,18 @@
     "genre": "动作 / 犯罪 / 剧情"
   },
   {
+    "title": "芳华",
+    "year": 2017,
+    "category": "chinese",
+    "rating": 7.7,
+    "tags": [
+      "历史"
+    ],
+    "director": "冯小刚",
+    "actors": "黄轩 / 苗苗 / 钟楚曦",
+    "genre": "剧情 / 历史 / 战争"
+  },
+  {
     "title": "寒战II Cold War II",
     "year": 2016,
     "category": "chinese",
@@ -627,100 +682,45 @@
     "genre": "剧情 / 犯罪 / 警匪"
   },
   {
-    "title": "芳华",
-    "year": 2017,
+    "title": "花样年华 In the Mood for Love",
+    "year": 2000,
     "category": "chinese",
-    "rating": 7.7,
+    "rating": 9.3,
     "tags": [
-      "历史"
+      "爱情",
+      "王家卫",
+      "东方美学",
+      "克制"
     ],
-    "director": "冯小刚",
-    "actors": "黄轩 / 苗苗 / 钟楚曦",
-    "genre": "剧情 / 历史 / 战争"
+    "director": "王家卫",
+    "actors": "梁朝伟 / 张曼玉",
+    "genre": "剧情 / 爱情"
   },
   {
-    "title": "奥本海默 Oppenheimer",
-    "year": 2023,
-    "category": "drama",
-    "rating": 8.9,
-    "tags": [
-      "传记",
-      "核武器",
-      "历史",
-      "诺兰"
-    ],
-    "director": "克里斯托弗·诺兰",
-    "actors": "基里安·墨菲 / 艾米莉·布朗特 / 马特·达蒙 / 小罗伯特·唐尼",
-    "genre": "剧情 / 传记 / 历史"
-  },
-  {
-    "title": "秘密会议 Conclave",
-    "year": 2024,
-    "category": "drama",
-    "rating": 7.5,
-    "tags": [
-      "教宗选举",
-      "权力阴谋",
-      "宗教与政治"
-    ],
-    "director": "爱德华·贝尔格 Edward Berger",
-    "actors": "拉尔夫·费因斯、斯坦利·图齐、约翰·利思戈、伊莎贝拉·罗塞里尼、赛尔乔·卡斯特利托",
-    "genre": "剧情 / 惊悚"
-  },
-  {
-    "title": "死亡诗社 Dead Poets Society",
-    "year": 1989,
-    "category": "drama",
+    "title": "卧虎藏龙",
+    "year": 2000,
+    "category": "chinese",
     "rating": 9.0,
     "tags": [
-      "成长",
-      "教育",
-      "自由思想",
-      "青春"
+      "武侠",
+      "东方美学",
+      "爱情",
+      "经典"
     ],
-    "director": "彼得·威尔",
-    "actors": "罗宾·威廉姆斯 / 罗伯特·肖恩·莱纳德 / 伊桑·霍克",
-    "genre": "剧情 / 青春 / 教育"
+    "director": "李安",
+    "actors": "周润发 / 杨紫琼 / 章子怡 / 张震",
+    "genre": "剧情 / 动作 / 爱情"
   },
   {
-    "title": "美国往事 Once Upon a Time in America",
-    "year": 1984,
-    "category": "drama",
-    "rating": 9.7,
+    "title": "新龙门客栈 New Dragon Gate Inn",
+    "year": 1992,
+    "category": "chinese",
+    "rating": 9.2,
     "tags": [
-      "黑帮史诗",
-      "宿命",
-      "记忆与幻觉"
+      "武侠"
     ],
-    "director": "赛尔乔·莱昂内 Sergio Leone",
-    "actors": "罗伯特·德尼罗、詹姆斯·伍兹、伊丽莎白·麦戈文",
-    "genre": "犯罪 / 剧情 / 黑帮"
-  },
-  {
-    "title": "决战犹马镇 3:10 to Yuma",
-    "year": 2007,
-    "category": "drama",
-    "rating": 8.8,
-    "tags": [
-      "西部",
-      "正义与人性"
-    ],
-    "director": "詹姆斯·曼高德 James Mangold",
-    "actors": "克里斯蒂安·贝尔、罗素·克劳",
-    "genre": "西部 / 动作 / 剧情"
-  },
-  {
-    "title": "大地惊雷 True Grit",
-    "year": 2010,
-    "category": "drama",
-    "rating": 8.1,
-    "tags": [
-      "西部",
-      "复仇",
-      "勇气"
-    ],
-    "director": "科恩兄弟（乔尔·科恩、伊桑·科恩）",
-    "actors": "海莉·斯坦菲尔德、杰夫·布里吉斯、马特·达蒙、乔什·布洛林",
-    "genre": "西部 / 剧情 / 动作"
+    "director": "李惠民",
+    "actors": "张曼玉、梁家辉、甄子丹、林青霞",
+    "genre": "武侠 / 动作 / 古装"
   }
 ]
