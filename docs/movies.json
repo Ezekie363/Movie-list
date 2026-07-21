@@ -285,6 +285,19 @@
     "genre": "动作 / 犯罪 / 惊悚"
   },
   {
+    "title": "穷街陋巷 Mean Streets",
+    "year": 1973,
+    "category": "action",
+    "rating": 8.0,
+    "tags": [
+      "黑帮",
+      "街头"
+    ],
+    "director": "马丁·斯科塞斯",
+    "actors": "罗伯特·德尼罗 / 哈威·凯特尔 / 大卫·普罗瓦尔 / 艾米·罗宾森",
+    "genre": "剧情 / 犯罪"
+  },
+  {
     "title": "GT赛车：极速狂飙 Gran Turismo",
     "year": 2023,
     "category": "action",
