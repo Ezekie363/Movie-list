@@ -428,6 +428,19 @@
     "genre": "西部 / 剧情 / 动作"
   },
   {
+    "title": "壮志凌云 Top Gun",
+    "year": 1986,
+    "category": "drama",
+    "rating": 7.8,
+    "tags": [
+      "军事",
+      "剧情"
+    ],
+    "director": "托尼·斯科特",
+    "actors": "汤姆·克鲁斯 / 凯莉·麦吉利斯 / 方·基默",
+    "genre": "动作 / 剧情"
+  },
+  {
     "title": "奥本海默 Oppenheimer",
     "year": 2023,
     "category": "drama",
